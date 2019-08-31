@@ -14,17 +14,6 @@ class Jogo:
         self.categoria = categoria
         self.console = console
 
-class Usuario:
-    def __init__(self, id, nome, senha):
-        self.id = id
-        self.nome = nome
-        self.senha = senha
-
-
-usuario1 = Usuario('admin', 'Saulo Januzzi', '1234')
-
-usuarios = {usuario1.id: usuario1}
-
 jogo1 = Jogo('Super Mario', 'Ação', 'SNES')
 jogo2 = Jogo('Pokemon Gold', 'RPG', 'GBA')
 lista = [jogo1, jogo2]
@@ -33,7 +22,7 @@ lista = [jogo1, jogo2]
 def index():
     return render_template('lista.html', titulo='Constrole de Cadastro', jogos=lista)
 
-@app.route('/ConsultaCadastros')
+@app.route('/consultacadastros')
 def consultaCadastro():
     return render_template('lista.html', titulo='Constrole de Cadastro', jogos=lista)
 
@@ -57,21 +46,11 @@ def criar():
 def deletar():
     return redirect(url_for('novo'))
 
-@app.route('/login')
-def login():
-    proxima = request.args.get('proxima')
-    return render_template('login.html', proxima=proxima)
+
 
 @app.route('/menu', methods=['GET'])
 def menu():
     return render_template('menu.html', titulo='Constrole de Cadastro', jogos=lista)
-
-
-@app.route('/logout')
-def logout():
-    session['usuario_logado'] = None
-    flash('Nenhum usuário logado!')
-    return redirect(url_for('index'))
 
 
 def main():
