@@ -4,6 +4,7 @@ import os
 import uuid
 import regra_score
 
+
 app = Flask(__name__)
 app.secret_key = 'SauloJanuzzi'
 cors = CORS(app, resource={r"/*":{"origins": "*"}})
@@ -65,9 +66,9 @@ def deletar():
 
 
 
-@app.route('/menu', methods=['GET'])
+@app.route('/menu')
 def menu():
-    return render_template('menu.html', titulo='Constrole de Cadastro', jogos=lista)
+    return render_template('menu.html', titulo='Controle de Cartão de Crédito')
 
 
 def main():
