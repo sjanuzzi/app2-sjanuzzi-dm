@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
+    <meta charset="UTF-8">
+    <title>Cadastro de Cliente</title>
+</head>
+<body>
+<nav id="menu">
+    <ul>
+        <a class="btn btn-primary btn-salvar"  href="{{url_for('novo')}}">Novo Cadastro</a>
+        <a class="btn btn-primary btn-salvar"  href="{{url_for('consultaCadastro')}}">Consultar Lista Cadastros</a>
+        <a class="btn btn-primary btn-salvar"  href="{{url_for('logout')}}">Logout</a>
+    </ul>
+</nav>
+
+</body>
+</html>
