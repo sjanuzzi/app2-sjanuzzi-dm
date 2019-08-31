@@ -1,30 +1,45 @@
 from flask import Flask, render_template, request, redirect, session, flash, url_for
-import os
 from flask_cors import CORS
-
+import os
+import uuid
+import regra_score
 
 app = Flask(__name__)
 app.secret_key = 'SauloJanuzzi'
 cors = CORS(app, resource={r"/*":{"origins": "*"}})
 
 
-class Jogo:
-    def __init__(self, nome, categoria, console):
+class pessoa:
+    def __init__(self, nome, cpf, renda, logradouro, numero_logradouro, bairro, score_pessoa, valor_credito, id):
         self.nome = nome
-        self.categoria = categoria
-        self.console = console
+        self.cpf = cpf
+        self.renda = renda
+        self.logradouro = logradouro
+        self.numero_logradouro = numero_logradouro
+        self.bairro = bairro
+        self.score_pessoa = score_pessoa
+        self.valor_credito = valor_credito
+        self.id = id
 
-jogo1 = Jogo('Super Mario', 'Ação', 'SNES')
-jogo2 = Jogo('Pokemon Gold', 'RPG', 'GBA')
-lista = [jogo1, jogo2]
+
+
+pessoa1 = pessoa('Saulo Januzzi', '12345678990', 28456, 'Rua das Piabas', '133', 'jardim',301,1000, uuid.uuid1())
+pessoa2 = pessoa('Pedro Januzzi', '32112332112', 13456, 'Rua das Piabas', '133', 'jardim',660, 500,uuid.uuid1())
+
+lista = [pessoa1, pessoa2]
+
+@app.route('/teste')
+def teste():
+    return "<h1>Hello World!</h1>"
+
 
 @app.route('/')
 def index():
-    return render_template('lista.html', titulo='Constrole de Cadastro', jogos=lista)
+    return render_template('lista.html', titulo='Constrole de Cadastro', pessoas=lista)
 
 @app.route('/consultacadastros')
-def consultaCadastro():
-    return render_template('lista.html', titulo='Constrole de Cadastro', jogos=lista)
+def consultacadastro():
+    return render_template('lista.html', titulo='Constrole de Cadastro', pessoas    =lista)
 
 
 @app.route('/novo')
@@ -33,13 +48,15 @@ def novo():
 
 @app.route('/criar', methods=['POST',])
 def criar():
-    nome = request. form['nome']
-    categoria = request. form['categoria']
-    console = request. form['console']
-    jogo = Jogo(nome, categoria, console)
-    lista.append(jogo)
+    score = regra_score.defini_score()
+
+    nova_pessoa = pessoa(request.form['nome'], request.form['cpf'], request.form['renda'], request.form['logradouro']
+                         , request.form['numero'], request.form['bairro'],score ,
+                         regra_score.gerar_credito(request.form['renda'], score), uuid.uuid1())
+
+    lista.append(nova_pessoa)
     flash('Cadastro realizado com sucesso!')
-    return redirect(url_for('novo'))
+    return redirect(url_for('consultacadastro'))
 
 
 @app.route('/deletar')

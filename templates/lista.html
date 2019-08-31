@@ -4,16 +4,28 @@
         <thead>
             <tr>
                 <th>Nome</th>
-                <th>Categoria</th>
-                <th>Console</th>
+                <th>Cpf</th>
+                <th>Logradouro</th>
+                <th>Número</th>
+                <th>Bairro</th>
+                <th>Renda</th>
+                <th>Score</th>
+                <th>Crédito</th>
+                <th>Edição</th>
             </tr>
         </thead>
         <tbody>
-        {% for jogo in jogos %}
+        {% for pessoa in pessoas %}
                         <tr>
-                            <td>{{ jogo.nome }}</td>
-                            <td>{{ jogo.categoria }}</td>
-                            <td>{{ jogo.console }}</td>
+                            <td>{{ pessoa.nome }}</td>
+                            <td>{{ pessoa.cpf}}</td>
+                            <td>{{ pessoa.logradouro}}</td>
+                            <td>{{ pessoa.numero_logradouro}}</td>
+                            <td>{{ pessoa.bairro}}</td>
+                            <td>{{ pessoa.renda}}</td>
+                            <td>{{ pessoa.score_pessoa}}</td>
+                            <td>{{ pessoa.valor_credito}}</td>
+
                         </tr>
         {% endfor %}
         </tbody>
