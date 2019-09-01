@@ -25,9 +25,17 @@
                             <td>{{ pessoa.renda}}</td>
                             <td>{{ pessoa.score_pessoa}}</td>
                             <td>{{ pessoa.valor_credito}}</td>
+                             <td>
+                                <a href="{{ url_for('deletar', cpf=pessoa.cpf) }}">Deletar</a>
+                            </td>
+
 
                         </tr>
+
         {% endfor %}
         </tbody>
     </table>
+<form action="{{ url_for('novo') }}">
+<button type="submit" class="btn btn-primary btn-salvar">Cadastrar Novo Cliente</button>
+</form>
 {% endblock %}

@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request, redirect, session, flash, url_for
 from flask_cors import CORS
-import os
-import uuid
-import regra_score
+from dao import PessoaDao, UsuarioDao
+from models import Pessoa, Usuario
+import os, regra_score,configparser, mysql.connector
 
 
 app = Flask(__name__)
@@ -10,24 +10,16 @@ app.secret_key = 'SauloJanuzzi'
 cors = CORS(app, resource={r"/*":{"origins": "*"}})
 
 
-class pessoa:
-    def __init__(self, nome, cpf, renda, logradouro, numero_logradouro, bairro, score_pessoa, valor_credito, id):
-        self.nome = nome
-        self.cpf = cpf
-        self.renda = renda
-        self.logradouro = logradouro
-        self.numero_logradouro = numero_logradouro
-        self.bairro = bairro
-        self.score_pessoa = score_pessoa
-        self.valor_credito = valor_credito
-        self.id = id
+config = configparser.ConfigParser()
+config.read("db.config")
 
-
-
-pessoa1 = pessoa('Saulo Januzzi', '12345678990', 28456, 'Rua das Piabas', '133', 'jardim',301,1000, uuid.uuid1())
-pessoa2 = pessoa('Pedro Januzzi', '32112332112', 13456, 'Rua das Piabas', '133', 'jardim',660, 500,uuid.uuid1())
-
-lista = [pessoa1, pessoa2]
+db = mysql.connector.connect(
+  host=config.get("DB", "host"),
+  user=config.get("DB", "user"),
+  passwd=config.get("DB", "passwd")
+)
+pessoa_dao = PessoaDao(db)
+usuario_dao = UsuarioDao(db)
 
 @app.route('/teste')
 def teste():
@@ -36,11 +28,12 @@ def teste():
 
 @app.route('/')
 def index():
-    return render_template('lista.html', titulo='Constrole de Cadastro', pessoas=lista)
+    return render_template('lista.html', titulo='Constrole de Cadastro', pessoas=lista1)
 
 @app.route('/consultacadastros')
 def consultacadastro():
-    return render_template('lista.html', titulo='Constrole de Cadastro', pessoas    =lista)
+    lista = pessoa_dao.listar()
+    return render_template('lista.html', titulo='Constrole de Cadastro', pessoas=lista)
 
 
 @app.route('/novo')
@@ -50,20 +43,21 @@ def novo():
 @app.route('/criar', methods=['POST',])
 def criar():
     score = regra_score.defini_score()
+    nova_pessoa = Pessoa(request.form['cpf'], request.form['nome'], request.form['renda'], request.form['logradouro']
+                         , request.form['numero'], request.form['bairro'],score,
+                         regra_score.gerar_credito(request.form['renda'], score))
 
-    nova_pessoa = pessoa(request.form['nome'], request.form['cpf'], request.form['renda'], request.form['logradouro']
-                         , request.form['numero'], request.form['bairro'],score ,
-                         regra_score.gerar_credito(request.form['renda'], score), uuid.uuid1())
 
-    lista.append(nova_pessoa)
+    pessoa_dao.salvar(nova_pessoa)
     flash('Cadastro realizado com sucesso!')
     return redirect(url_for('consultacadastro'))
 
 
-@app.route('/deletar')
-def deletar():
-    return redirect(url_for('novo'))
-
+@app.route('/deletar/<string:cpf>')
+def deletar(cpf):
+    pessoa_dao.deletar(cpf)
+    flash('Cadastro removido com sucesso!')
+    return redirect(url_for('consultacadastro'))
 
 
 @app.route('/menu')

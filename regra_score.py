@@ -13,6 +13,6 @@ def gerar_credito(renda, score):
         novo_credito = renda / 2
         return novo_credito if novo_credito > 1000 else 1000.00
     elif score in range(800, 951):
-        return ((renda * 200) / 100)
+        return ((renda * 200) / 100) #TODO revisar regras
     elif (951, 999):
         return 1000000
