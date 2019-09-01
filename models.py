@@ -1,4 +1,4 @@
-class Pessoa:
+class Pessoa(object):
     def __init__(self, cpf, nome, renda, logradouro, numero_logradouro, bairro, score_pessoa, valor_credito):
         self.cpf = cpf
         self.nome = nome
