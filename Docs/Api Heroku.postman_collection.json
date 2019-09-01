@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "4920b9f8-b206-4292-805a-d320018c97c3",
+		"name": "Api Heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "hEROKU /api/consultacadastros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://app2-sjanuzzi-dm.herokuapp.com/api/consultacadastros",
+					"protocol": "https",
+					"host": [
+						"app2-sjanuzzi-dm",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"consultacadastros"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Heroku /api/criar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"bairro\": \"Satelite\",\r\n        \"cpf\": \"12345678990\",\r\n        \"logradouro\": \"Rua dos Planetas\",\r\n        \"nome\": \" Teste Json postman\",\r\n        \"numero_logradouro\": \"1\",\r\n        \"renda\": \"1233003.00\"\r\n}"
+				},
+				"url": {
+					"raw": "https://app2-sjanuzzi-dm.herokuapp.com/api/criar",
+					"protocol": "https",
+					"host": [
+						"app2-sjanuzzi-dm",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"criar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Heroku /api/deletar/12345678990",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://app2-sjanuzzi-dm.herokuapp.com/api/deletar/12345678990",
+					"protocol": "https",
+					"host": [
+						"app2-sjanuzzi-dm",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"deletar",
+						"12345678990"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
