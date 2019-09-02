@@ -27,11 +27,9 @@
             <input type="text" id="bairro" name="bairro" class="form-control">
           </div>
             <br></br><br></br><br></br><br></br>
-          <button type="submit" class="btn btn-primary btn-salvar">Salvar</button>
-
+            <button type="submit" class="btn btn-primary btn-salvar btn-sm">Salvar</button>
+            <a class="btn btn-primary btn-salvar btn-sm" href="{{url_for('index')}}" >Cancelar</a>
         </fieldset>
     </form>
-           <form action="{{ url_for('consultacadastro') }}">
-            <button type="submit" class="btn btn-primary btn-salvar">Cancelar</button>
-            </form>
+
 {% endblock %}

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, flash, url_for, jsonify, Response
+from flask import Flask, render_template, request, redirect, flash, url_for, jsonify, json
 from flask_cors import CORS
 from dao import PessoaDao, UsuarioDao
 from models import Pessoa, Usuario
@@ -46,28 +46,39 @@ def novo():
 
 @app.route('/criar', methods=['POST', ])
 def criar():
-    score = regra_score.defini_score()
-    nova_pessoa = Pessoa(request.form['cpf'], request.form['nome'], request.form['renda'], request.form['logradouro']
-                         , request.form['numero'], request.form['bairro'],score,
-                         regra_score.gerar_credito(request.form['renda'], score))
-    pessoa_dao.salvar(nova_pessoa)
-    flash('Cadastro realizado com sucesso!')
-
-    return redirect(url_for('consultacadastro'))
-
+    if request.form['cpf'].isdigit() and request.form['renda'].isdigit():
+        score = regra_score.defini_score()
+        nova_pessoa = Pessoa(request.form['cpf'], request.form['nome'], request.form['renda'], request.form['logradouro']
+                            , request.form['numero'], request.form['bairro'],score,
+                             regra_score.gerar_credito(request.form['renda'], score))
+        pessoa_dao.salvar(nova_pessoa)
+        flash('Cadastro realizado com sucesso!')
+        return redirect(url_for('consultacadastro'))
+    else:
+        flash('Digite apenas número nos campos de CPF e Renda!')
+        return redirect(url_for('novo'))
 
 @app.route('/api/criar', methods=['POST', ])
 def criar_api():
-    score = regra_score.defini_score()
-    nova_pessoa = Pessoa(request.json['cpf'], request.json['nome'], request.json['renda'], request.json['logradouro']
+
+    if request.json['cpf'].isdigit() and request.json['renda'].isdigit():
+        score = regra_score.defini_score()
+        nova_pessoa = Pessoa(request.json['cpf'], request.json['nome'], request.json['renda'], request.json['logradouro']
                          , request.json['numero_logradouro'], request.json['bairro'],score,
                          regra_score.gerar_credito(request.json['renda'], score))
-    pessoa_dao.salvar(nova_pessoa)
+        pessoa_dao.salvar(nova_pessoa)
 
-    return jsonpickle.encode(nova_pessoa)
+        return jsonpickle.encode(nova_pessoa)
+    else:
+        response = app.response_class(
+            response=json.dumps('Digite apenas número nos campos de CPF e Renda'),
+            status=400,
+            mimetype='application/json'
+        )
+        return response
 
 
-@app.route('/deletar/<string:cpf>')
+@app.route('/deletar/<string:cpf>',  methods=['DELETE', ])
 def deletar(cpf):
     pessoa_dao.deletar(cpf)
     flash('Cadastro removido com sucesso!')

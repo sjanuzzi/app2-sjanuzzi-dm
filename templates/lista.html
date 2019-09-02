@@ -28,14 +28,18 @@
                              <td>
                                 <a href="{{ url_for('deletar', cpf=pessoa.cpf) }}">Deletar</a>
                             </td>
-
-
                         </tr>
-
         {% endfor %}
         </tbody>
     </table>
-<form action="{{ url_for('novo') }}">
-<button type="submit" class="btn btn-primary btn-salvar">Cadastrar Novo Cliente</button>
-</form>
+<div class="btn-group">
+    <form action="{{ url_for('novo') }}">
+        <button type="submit" class="btn btn-primary btn-salvar btn-sm">Cadastrar Novo Cliente</button>
+    </form>
+</div>
+<div class="btn-group">
+    <form action="{{ url_for('index') }}">
+        <button type="submit" class="btn btn-primary btn-salvar btn-sm">Voltar</button>
+    </form>
+</div>
 {% endblock %}
