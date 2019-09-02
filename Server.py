@@ -78,7 +78,7 @@ def criar_api():
         return response
 
 
-@app.route('/deletar/<string:cpf>',  methods=['DELETE', ])
+@app.route('/deletar/<string:cpf>')
 def deletar(cpf):
     pessoa_dao.deletar(cpf)
     flash('Cadastro removido com sucesso!')
