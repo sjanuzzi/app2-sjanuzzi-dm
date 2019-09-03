@@ -1,4 +1,4 @@
-from models import Pessoa, Usuario
+from src.models import Pessoa, Usuario
 
 
 SQL_EXCLUI_POR_CPF = 'delete from heroku_93dc94d1abacf09.cadastro_pessoa where cpf = %s'
