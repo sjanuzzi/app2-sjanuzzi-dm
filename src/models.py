@@ -8,10 +8,3 @@ class Pessoa(object):
         self.bairro = bairro
         self.score_pessoa = score_pessoa
         self.valor_credito = valor_credito
-
-
-class Usuario:
-    def __init__(self, id, nome, senha):
-        self.id = id
-        self.nome = nome
-        self.senha = senha

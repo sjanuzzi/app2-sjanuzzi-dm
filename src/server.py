@@ -1,21 +1,21 @@
 from flask import Flask
 from flask_cors import CORS
 import os, configparser, mysql.connector
-
+from src.dbaccess import db_access
 
 app = Flask(__name__,template_folder='templates')
 app.secret_key = 'ConstroleCadastro'
 cors = CORS(app, resource={r"/*":{"origins": "*"}})
 
 
-config = configparser.ConfigParser()
-config.read("src/db.config")
-
+db = db_access()
+"""
 db = mysql.connector.connect(
   host=config.get("DB", "host"),
   user=config.get("DB", "user"),
   passwd=config.get("DB", "passwd")
 )
+"""
 
 from src.views import *
 

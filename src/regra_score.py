@@ -1,5 +1,6 @@
 import random
 
+
 def defini_score():
     return random.randint(1, 999)
 

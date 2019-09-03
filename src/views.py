@@ -41,11 +41,11 @@ def novo():
 def criar():
     if request.form['cpf'].isdigit() and request.form['renda'].isdigit():
         score = regra_score.defini_score()
-        if request.content_type not in ['application/json', 'application/json; charset=UTF-8']:
-            pass
+        #if request.content_type not in ['application/json', 'application/json; charset=UTF-8']:
+        #    pass
 
-        pessoa_json = request.get_json()
-        x = pessoa_json.get('cpf')
+        #pessoa_json = request.get_json()
+        """x = pessoa_json.get('cpf')
         nova_pessoa = Pessoa(pessoa_json['cpf'], pessoa_json['nome'], pessoa_json['renda'], pessoa_json['logradouro']
                , pessoa_json['numero_logradouro'], pessoa_json['bairro'], score,
                regra_score.gerar_credito(pessoa_json['renda'], score))
@@ -53,7 +53,7 @@ def criar():
         nova_pessoa = Pessoa(request.form['cpf'], request.form['nome'], request.form['renda'], request.form['logradouro']
                              , request.form['numero'], request.form['bairro'], score,
                              regra_score.gerar_credito(request.form['renda'], score))
-        """
+
         pessoa_dao.salvar(nova_pessoa)
         flash('Cadastro realizado com sucesso!')
         return redirect(url_for('consultacadastro'))

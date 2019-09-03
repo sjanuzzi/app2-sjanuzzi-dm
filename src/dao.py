@@ -2,8 +2,8 @@ from src.models import Pessoa, Usuario
 
 
 SQL_EXCLUI_POR_CPF = 'delete from heroku_93dc94d1abacf09.cadastro_pessoa where cpf = %s'
-SQL_BUSCA_CADASTRO = 'SELECT cpf, nome, renda, logradouro, numero,bairro, socre, valor_credito from heroku_93dc94d1abacf09.cadastro_pessoa'
-SQL_CRIA_CADASTRO= 'INSERT into heroku_93dc94d1abacf09.cadastro_pessoa (cpf,nome,renda,logradouro,numero,bairro,socre,' \
+SQL_BUSCA_CADASTRO = 'select cpf, nome, renda, logradouro, numero,bairro, socre, valor_credito from heroku_93dc94d1abacf09.cadastro_pessoa'
+SQL_CRIA_CADASTRO= 'insert into heroku_93dc94d1abacf09.cadastro_pessoa (cpf,nome,renda,logradouro,numero,bairro,socre,' \
                    'valor_credito) values (%s, %s, %s,%s, %s, %s,%s, %s)'
 
 
