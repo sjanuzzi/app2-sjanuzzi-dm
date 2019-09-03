@@ -1,22 +1,31 @@
 from flask import Flask
 from flask_cors import CORS
-import os, configparser, mysql.connector
-from src.dbaccess import db_access
+import os, mysql.connector
+from src.dbaccess import dbconfig
+
+
+
 
 app = Flask(__name__,template_folder='templates')
 app.secret_key = 'ConstroleCadastro'
 cors = CORS(app, resource={r"/*":{"origins": "*"}})
 
+filename = 'config.ini'
+section = 'DB'
 
-db = db_access()
+config = dbconfig(filename, section)
+db = mysql.connector.connect(**config)
+
 """
+config = configparser.ConfigParser()
+config.read("./adb.config")
+
 db = mysql.connector.connect(
   host=config.get("DB", "host"),
   user=config.get("DB", "user"),
   passwd=config.get("DB", "passwd")
 )
 """
-
 from src.views import *
 
 def main():

@@ -2,11 +2,11 @@ from flask import render_template, request, redirect, flash, url_for, jsonify, j
 from src.models import Pessoa
 import json, jsonpickle
 from src import regra_score
-from src.dao import PessoaDao, UsuarioDao
+from src.dao import PessoaDao
 from src.server import db, app
 
 pessoa_dao = PessoaDao(db)
-usuario_dao = UsuarioDao(db)
+#usuario_dao = UsuarioDao(db)
 
 
 @app.route('/')

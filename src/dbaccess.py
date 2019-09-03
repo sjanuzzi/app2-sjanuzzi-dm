@@ -1,15 +1,23 @@
-import configparser, mysql.connector
+from configparser import ConfigParser
+
+def dbconfig(filename, section):
+    parser = ConfigParser()
+    parser.read(filename)
+
+    db = {}
+    if parser.has_section(section):
+        items = parser.items(section)
+        for item in items:
+            db[item[0]] = item[1]
+    else:
+        raise Exception('{0} not found in the {1} file'.format(section, filename))
+    return db
 
 
 
-def db_access():
-    config = configparser.ConfigParser()
-    config.read("src/db.config")
-    print (config.get("DB", "host"))
-    return mysql.connector.connect(
-                host=config.get("DB", "host"),
-                user=config.get("DB", "user"),
-                passwd=config.get("DB", "passwd"))
+filename = 'config.ini'
+section = 'DB'
 
+config = dbconfig(filename, section)
+print (config)
 
-db_access()
