@@ -3,7 +3,7 @@ from src.models import Pessoa
 import json, jsonpickle
 from src import regra_score
 from src.dao import PessoaDao
-from src.server import db, app
+from server import db, app
 
 pessoa_dao = PessoaDao(db)
 
