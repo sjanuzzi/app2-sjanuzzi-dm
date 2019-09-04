@@ -7,7 +7,7 @@ app = Flask(__name__)
 app.secret_key = 'ConstroleCadastro'
 cors = CORS(app, resource={r"/*":{"origins": "*"}})
 
-filename = 'config.ini'
+filename = 'db.config'
 section = 'DB'
 db = connect(dbconfig(filename, section))
 
