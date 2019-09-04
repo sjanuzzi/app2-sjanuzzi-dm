@@ -1,15 +1,31 @@
 from flask import Flask
 from flask_cors import CORS
 import os
-from dbaccess import dbconfig, connect
+from configparser import ConfigParser
+import mysql.connector
+from configparser import ConfigParser
+
+#from dbaccess import dbconfig, connect
 
 app = Flask(__name__)
 app.secret_key = 'ConstroleCadastro'
 cors = CORS(app, resource={r"/*":{"origins": "*"}})
 
-filename = 'db.config'
-section = 'DB'
-db = connect(dbconfig(filename, section))
+
+config = ConfigParser()
+config.read("db.config")
+
+
+
+db = mysql.connector.connect(host="us-cdbr-iron-east-02.cleardb.net", user="b78e789bf5ed96",
+                             password ="6da9c81f", database="heroku_93dc94d1abacf09")
+#        config.get('DB','host'),
+#                            config.get('DB','user'),
+#                            config.get('DB','passwd'))
+
+
+
+#connect(dbconfig(filename, section))
 
 
 from views import *
