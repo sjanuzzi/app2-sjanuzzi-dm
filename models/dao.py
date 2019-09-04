@@ -29,23 +29,9 @@ class PessoaDao:
         self.__db.commit()
 
 
-class UsuarioDao:
-    def __init__(self, db):
-        self.__db = db
-
-    def buscar_por_id(self, id):
-        cursor = self.__db.connection.cursor()
-        cursor.execute(SQL_BUSCA_CADASTRO, (id,))
-        dados = cursor.fetchone()
-        usuario = traduz_usuario(dados) if dados else None
-        return usuario
-
-
 def traduz_pessoas(pessoa):
     def cria_pessoa_com_tupla(tupla):
         return Pessoa(tupla[0], tupla[1], tupla[2], tupla[3], tupla[4], tupla[5], tupla[6], tupla[7])
     return list(map(cria_pessoa_com_tupla, pessoa))
 
 
-def traduz_usuario(tupla):
-    return Usuario(tupla[0], tupla[1], tupla[2])
