@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ceca370-f23a-43f6-a038-9c14dd63b2fe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/srcTest/test_dbconfig.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dbaccess.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dbaccess.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/dbaccess.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/srcTest/tests/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/test_dbconfig.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/test_defini_score.py" beforeDir="false" afterPath="$PROJECT_DIR$/srcTest/test_defini_score.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="16" selection-start-line="12" selection-end-line="16" />
+            <state relative-caret-position="109">
+              <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -33,28 +35,64 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="25" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/dbaccess.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+            <state relative-caret-position="221">
+              <caret line="21" column="49" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#83#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/tests/test_dbconfig.py">
+        <entry file="file://$PROJECT_DIR$/src/dao.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+            <state relative-caret-position="134">
+              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/srcTest/test_views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="46">
+              <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
               <folding>
-                <element signature="e#0#29#0" expanded="true" />
+                <element signature="e#0#20#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/srcTest/test_dbconfig.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dbaccess.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -90,6 +128,7 @@
       <find>json_response</find>
       <find>menu</find>
       <find>'CONTENT_TYPE'</find>
+      <find>ConfigParser</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -127,15 +166,18 @@
         <option value="$PROJECT_DIR$/src/models.py" />
         <option value="$PROJECT_DIR$/src/regra_score.py" />
         <option value="$PROJECT_DIR$/src/tests/test_defini_score.py" />
-        <option value="$PROJECT_DIR$/src/views.py" />
         <option value="$PROJECT_DIR$/src/dao.py" />
         <option value="$PROJECT_DIR$/src/config.py" />
         <option value="$PROJECT_DIR$/src/db.config" />
-        <option value="$PROJECT_DIR$/src/config.ini" />
         <option value="$PROJECT_DIR$/src/db_access.py" />
+        <option value="$PROJECT_DIR$/src/config.ini" />
+        <option value="$PROJECT_DIR$/src/views.py" />
         <option value="$PROJECT_DIR$/src/server.py" />
-        <option value="$PROJECT_DIR$/src/dbaccess.py" />
         <option value="$PROJECT_DIR$/src/tests/test_dbconfig.py" />
+        <option value="$PROJECT_DIR$/src/tests/test_views.py" />
+        <option value="$PROJECT_DIR$/src/dbaccess.py" />
+        <option value="$PROJECT_DIR$/srcTest/test_views.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
       </list>
     </option>
   </component>
@@ -168,8 +210,7 @@
             <path>
               <item name="Teste_DMCard" type="b2602c69:ProjectViewProjectNode" />
               <item name="Teste_DMCard" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="srcTest" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -182,16 +223,19 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/tests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/srcTest" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\sjanu\PycharmProjects\Teste_DMCard\src\templates" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sjanu\PycharmProjects\Teste_DMCard\srcTest" />
       <recent name="C:\Users\sjanu\PycharmProjects\Teste_DMCard\src" />
       <recent name="C:\Users\sjanu\PycharmProjects\Teste_DMCard" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sjanu\PycharmProjects\Teste_DMCard\srcTest" />
+      <recent name="C:\Users\sjanu\PycharmProjects\Teste_DMCard\src\tests" />
+      <recent name="C:\Users\sjanu\PycharmProjects\Teste_DMCard\src\templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -206,7 +250,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests for test_dbconfig.TestDbconfig">
+  <component name="RunManager" selected="Python.server">
     <configuration name="dbaccess" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Teste_DMCard" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -270,55 +314,69 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for test_dbconfig.TestDbconfig" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for srcTest.test_dbconfig.TestDbconfig" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Teste_DMCard" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/srcTest/tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_dbconfig.TestDbconfig&quot;" />
+      <option name="_new_target" value="&quot;srcTest.test_dbconfig.TestDbconfig&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for test_defini_score.TestDefini_score" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for srcTest.test_dbconfig.TestDbconfig.test_ler_arquivo_config_para_obter_info_de_acesso_ao_db" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Teste_DMCard" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/srcTest/tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_defini_score.TestDefini_score&quot;" />
+      <option name="_new_target" value="&quot;srcTest.test_dbconfig.TestDbconfig.test_ler_arquivo_config_para_obter_info_de_acesso_ao_db&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for test_defini_score.TestDefini_score.test_gerar_credito_credito_metade_da_renda_limitado_a_mil" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for srcTest.test_views.TestIndex" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Teste_DMCard" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/tests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/srcTest/tests" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_defini_score.TestDefini_score.test_gerar_credito_credito_metade_da_renda_limitado_a_mil&quot;" />
+      <option name="_new_target" value="&quot;srcTest.test_views.TestIndex&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_views.TestIndex" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Teste_DMCard" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/srcTest" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_views.TestIndex&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests for test_dbconfig.TestDbconfig" />
-        <item itemvalue="Python.dbaccess" />
         <item itemvalue="Python.server" />
-        <item itemvalue="Python tests.Unittests for test_defini_score.TestDefini_score" />
-        <item itemvalue="Python tests.Unittests for test_defini_score.TestDefini_score.test_gerar_credito_credito_metade_da_renda_limitado_a_mil" />
+        <item itemvalue="Python tests.Unittests for test_views.TestIndex" />
+        <item itemvalue="Python tests.Unittests for srcTest.test_views.TestIndex" />
+        <item itemvalue="Python tests.Unittests for srcTest.test_dbconfig.TestDbconfig" />
+        <item itemvalue="Python tests.Unittests for srcTest.test_dbconfig.TestDbconfig.test_ler_arquivo_config_para_obter_info_de_acesso_ao_db" />
       </list>
     </recent_temporary>
   </component>
@@ -336,35 +394,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_for_test_defini_score_TestDefini_score_test_gerar_credito_credito_duas_vezes_valor_da_renda - 2019.09.03 at 08h 36m 51s.xml">
-      <configuration name="Unittests for test_defini_score.TestDefini_score.test_gerar_credito_credito_duas_vezes_valor_da_renda" configurationId="tests" />
+    <history-entry file="Unittests_for_test_views_TestIndex - 2019.09.03 at 23h 12m 03s.xml">
+      <configuration name="Unittests for test_views.TestIndex" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_defini_score_TestDefini_score_test_gerar_credito_credito_metade_da_renda_limitado_a_mil - 2019.09.03 at 08h 36m 57s.xml">
-      <configuration name="Unittests for test_defini_score.TestDefini_score.test_gerar_credito_credito_metade_da_renda_limitado_a_mil" configurationId="tests" />
+    <history-entry file="Unittests_for_test_views_TestIndex - 2019.09.03 at 23h 12m 36s.xml">
+      <configuration name="Unittests for test_views.TestIndex" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_defini_score_TestDefini_score_test_gerar_credito_credito_metade_da_renda_limitado_a_mil - 2019.09.03 at 08h 38m 40s.xml">
-      <configuration name="Unittests for test_defini_score.TestDefini_score.test_gerar_credito_credito_metade_da_renda_limitado_a_mil" configurationId="tests" />
+    <history-entry file="Unittests_for_test_views_TestIndex - 2019.09.03 at 23h 12m 54s.xml">
+      <configuration name="Unittests for test_views.TestIndex" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_defini_score_TestDefini_score - 2019.09.03 at 08h 40m 40s.xml">
-      <configuration name="Unittests for test_defini_score.TestDefini_score" configurationId="tests" />
+    <history-entry file="Unittests_for_test_views_TestIndex - 2019.09.03 at 23h 14m 24s.xml">
+      <configuration name="Unittests for test_views.TestIndex" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_dbconfig_TestDbconfig - 2019.09.03 at 14h 02m 37s.xml">
-      <configuration name="Unittests for test_dbconfig.TestDbconfig" configurationId="tests" />
+    <history-entry file="Unittests_for_test_views_TestIndex - 2019.09.03 at 23h 20m 27s.xml">
+      <configuration name="Unittests for test_views.TestIndex" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_dbconfig_TestDbconfig - 2019.09.03 at 14h 03m 13s.xml">
-      <configuration name="Unittests for test_dbconfig.TestDbconfig" configurationId="tests" />
+    <history-entry file="Unittests_for_test_views_TestIndex - 2019.09.03 at 23h 20m 44s.xml">
+      <configuration name="Unittests for test_views.TestIndex" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_dbconfig_TestDbconfig - 2019.09.03 at 14h 03m 58s.xml">
-      <configuration name="Unittests for test_dbconfig.TestDbconfig" configurationId="tests" />
+    <history-entry file="Unittests_for_test_views_TestIndex - 2019.09.03 at 23h 22m 20s.xml">
+      <configuration name="Unittests for test_views.TestIndex" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_dbconfig_TestDbconfig - 2019.09.03 at 14h 04m 30s.xml">
-      <configuration name="Unittests for test_dbconfig.TestDbconfig" configurationId="tests" />
+    <history-entry file="Unittests_for_test_views_TestIndex - 2019.09.03 at 23h 24m 51s.xml">
+      <configuration name="Unittests for test_views.TestIndex" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_dbconfig_TestDbconfig - 2019.09.03 at 14h 04m 39s.xml">
-      <configuration name="Unittests for test_dbconfig.TestDbconfig" configurationId="tests" />
+    <history-entry file="Unittests_for_test_views_TestIndex - 2019.09.03 at 23h 25m 47s.xml">
+      <configuration name="Unittests for test_views.TestIndex" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_for_test_dbconfig_TestDbconfig - 2019.09.03 at 14h 04m 44s.xml">
-      <configuration name="Unittests for test_dbconfig.TestDbconfig" configurationId="tests" />
+    <history-entry file="Unittests_for_test_views_TestIndex - 2019.09.03 at 23h 32m 06s.xml">
+      <configuration name="Unittests for test_views.TestIndex" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -380,18 +438,18 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16741072" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16741072" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32850242" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49925596" visible="true" weight="0.39291465" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49925596" weight="0.49436393" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4814815" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32850242" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32850242" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49925596" weight="0.30917874" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49925596" visible="true" weight="0.30917874" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50074404" side_tool="true" weight="0.31561998" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32850242" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -428,7 +486,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/views.py</url>
-          <line>42</line>
+          <line>41</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -442,13 +500,18 @@
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/dbaccess.py</url>
-          <line>13</line>
-          <option name="timeStamp" value="20" />
+          <url>file://$PROJECT_DIR$/srcTest/test_dbconfig.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
+      <configuration name="tests">
+        <watch expression="(section):&#10;       " />
+        <watch expression="section" />
+        <watch expression="parser" />
+      </configuration>
       <configuration name="PythonConfigurationType">
         <watch expression="request.headers['Content-Type']" language="Python" />
         <watch expression="request.headers" />
@@ -583,13 +646,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/config.py" />
-    <entry file="file://$PROJECT_DIR$/src/dao.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -598,24 +654,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/db.config" />
-    <entry file="file://$PROJECT_DIR$/src/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" selection-start-line="12" selection-end-line="16" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/test_defini_score.py">
+    <entry file="file://$PROJECT_DIR$/srcTest/test_defini_score.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="23" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="23" />
@@ -625,27 +664,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/config.ini">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/3/unittest/__init__.pyi">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="3" />
+        <state relative-caret-position="117">
+          <caret line="33" column="8" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/test_dbconfig.py">
+    <entry file="file://$PROJECT_DIR$/src/config.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        <state relative-caret-position="68">
+          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="11" column="17" lean-forward="true" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
           <folding>
-            <element signature="e#0#29#0" expanded="true" />
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcTest/config.ini">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tests/templates/novo.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcTest/test_dbconfig.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dbaccess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        <state relative-caret-position="136">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcTest/templates/novo.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="21" column="49" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#83#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/flask_testing/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="657">
+          <caret line="113" column="4" selection-start-line="113" selection-start-column="4" selection-end-line="113" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/srcTest/test_views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
         </state>
       </provider>
     </entry>

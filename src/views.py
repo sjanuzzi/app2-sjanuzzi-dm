@@ -6,7 +6,6 @@ from src.dao import PessoaDao
 from src.server import db, app
 
 pessoa_dao = PessoaDao(db)
-#usuario_dao = UsuarioDao(db)
 
 
 @app.route('/')
