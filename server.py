@@ -20,8 +20,8 @@ config = ConfigParser()
 config.read("db.config")
 
 
-db = mysql.connector.connect(host="us-cdbr-iron-east-02.cleardb.net", user="b78e789bf5ed96",
-                             password ="6da9c81f", database="heroku_93dc94d1abacf09")
+db = mysql.connector.connect(host="us-cdbr-iron-east-02.cleardb.net", user="b9915482ede514",
+                             password ="61427871", database="heroku_2f4f5627753b053")
 
 #from views import *
 
