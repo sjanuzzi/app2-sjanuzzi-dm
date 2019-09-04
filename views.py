@@ -1,8 +1,8 @@
 from flask import render_template, request, redirect, flash, url_for, jsonify, json
-from src.models import Pessoa
+from models import Pessoa
 import json, jsonpickle
-from src import regra_score
-from src.dao import PessoaDao
+import regra_score
+from dao import PessoaDao
 from server import db, app
 
 pessoa_dao = PessoaDao(db)

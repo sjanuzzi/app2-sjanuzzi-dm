@@ -1,5 +1,5 @@
 from unittest import TestCase, mock
-from src.dbaccess import dbconfig
+from dbaccess import dbconfig
 
 
 

@@ -1,8 +1,7 @@
-import flask_testing
 import unittest
 from flask import Flask
 from flask_testing import TestCase
-import src.views
+import views
 
 
 
@@ -12,7 +11,7 @@ class TestIndex(TestCase):
         self.app = Flask(__name__)
         self.app_context = self.app.app_context()
         self.app_context.push()
-        self.app = src.views.app.test_client()
+        self.app = views.app.test_client()
         self.client = self.app.test_client(use_cookie=True)
 
     def tearDown(self):

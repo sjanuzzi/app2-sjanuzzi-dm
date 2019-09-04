@@ -1,5 +1,5 @@
 from unittest import TestCase
-from src.regra_score import gerar_credito, defini_score
+from regra_score import gerar_credito, defini_score
 import random
 
 

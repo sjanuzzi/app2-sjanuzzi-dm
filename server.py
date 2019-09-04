@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_cors import CORS
 import os
-from src.dbaccess import dbconfig, connect
+from dbaccess import dbconfig, connect
 
 app = Flask(__name__)
 app.secret_key = 'ConstroleCadastro'
@@ -12,7 +12,7 @@ section = 'DB'
 db = connect(dbconfig(filename, section))
 
 
-from src.views import *
+from views import *
 
 
 def main():
