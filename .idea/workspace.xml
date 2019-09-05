@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6ceca370-f23a-43f6-a038-9c14dd63b2fe" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docs/Api Heroku.postman_collection.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/regra_score.py" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/regra_score.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/dao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/novo.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/novo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/template.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/views/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +21,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="24" column="148" lean-forward="true" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="148" />
+            <state relative-caret-position="408">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -30,8 +33,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="18" column="89" selection-start-line="18" selection-start-column="89" selection-end-line="18" selection-end-column="89" />
+            <state relative-caret-position="148">
+              <caret line="41" selection-start-line="41" selection-end-line="41" />
               <folding>
                 <element signature="e#0#83#0" expanded="true" />
               </folding>
@@ -40,10 +43,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/novo.html">
+        <entry file="file://$PROJECT_DIR$/controllers/regra_score.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="81" selection-start-line="30" selection-start-column="81" selection-end-line="30" selection-end-column="81" />
+            <state relative-caret-position="-249">
+              <caret line="7" column="30" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,17 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="9" selection-start-column="9" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Procfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
+            <state relative-caret-position="153">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -69,28 +66,28 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/dao.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="17">
+              <caret line="1" column="94" selection-start-line="1" selection-start-column="94" selection-end-line="1" selection-end-column="94" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db.config">
+        <entry file="file://$PROJECT_DIR$/templates/novo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+            <state relative-caret-position="255">
+              <caret line="15" column="75" selection-start-line="15" selection-start-column="75" selection-end-line="15" selection-end-column="75" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/dbaccess.py">
+        <entry file="file://$PROJECT_DIR$/teste.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+            <state relative-caret-position="102">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
               <folding>
-                <element signature="e#0#37#0" expanded="true" />
+                <element signature="e#0#27#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -127,6 +124,8 @@
       <find>menu</find>
       <find>'CONTENT_TYPE'</find>
       <find>ConfigParser</find>
+      <find>ConvertFormToJSON</find>
+      <find>formataDecimal</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -142,10 +141,8 @@
         <option value="$PROJECT_DIR$/Controller/usuario.py" />
         <option value="$PROJECT_DIR$/Controller/__init__.py" />
         <option value="$PROJECT_DIR$/templates/login.html" />
-        <option value="$PROJECT_DIR$/templates/template.html" />
         <option value="$PROJECT_DIR$/templates/menu2.html" />
         <option value="$PROJECT_DIR$/Server2.py" />
-        <option value="$PROJECT_DIR$/teste.py" />
         <option value="$PROJECT_DIR$/banco.py" />
         <option value="$PROJECT_DIR$/teste_post.py" />
         <option value="$PROJECT_DIR$/models.py" />
@@ -153,7 +150,6 @@
         <option value="$PROJECT_DIR$/testestring.py" />
         <option value="$PROJECT_DIR$/templates/menu.html" />
         <option value="$PROJECT_DIR$/templates/lista.html" />
-        <option value="$PROJECT_DIR$/templates/novo.html" />
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/Server.py" />
         <option value="$PROJECT_DIR$/src/templates/consulta_cadastro.html" />
@@ -176,8 +172,15 @@
         <option value="$PROJECT_DIR$/dao.py" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/models/dbaccess.py" />
-        <option value="$PROJECT_DIR$/server.py" />
         <option value="$PROJECT_DIR$/db.config" />
+        <option value="$PROJECT_DIR$/templates/template.html" />
+        <option value="$PROJECT_DIR$/BACKEND.py" />
+        <option value="$PROJECT_DIR$/backend.py" />
+        <option value="$PROJECT_DIR$/templates/novo2.html" />
+        <option value="$PROJECT_DIR$/server.py" />
+        <option value="$PROJECT_DIR$/templates/novo.html" />
+        <option value="$PROJECT_DIR$/controllers/regra_score.py" />
+        <option value="$PROJECT_DIR$/teste.py" />
         <option value="$PROJECT_DIR$/models/dao.py" />
         <option value="$PROJECT_DIR$/views/views.py" />
       </list>
@@ -197,7 +200,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -205,33 +207,44 @@
               <item name="Teste_DMCard" type="b2602c69:ProjectViewProjectNode" />
               <item name="Teste_DMCard" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Teste_DMCard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Teste_DMCard" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Teste_DMCard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Teste_DMCard" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/view" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\sjanu\PycharmProjects\Teste_DMCard\view" />
-      <recent name="C:\Users\sjanu\PycharmProjects\Teste_DMCard\models" />
-      <recent name="C:\Users\sjanu\PycharmProjects\Teste_DMCard" />
-      <recent name="C:\Users\sjanu\PycharmProjects\Teste_DMCard\srcTest" />
-      <recent name="C:\Users\sjanu\PycharmProjects\Teste_DMCard\src\tests" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\sjanu\PycharmProjects\Teste_DMCard\controllers" />
       <recent name="C:\Users\sjanu\PycharmProjects\Teste_DMCard\models" />
       <recent name="C:\Users\sjanu\PycharmProjects\Teste_DMCard" />
       <recent name="C:\Users\sjanu\PycharmProjects\Teste_DMCard\srcTest" />
       <recent name="C:\Users\sjanu\PycharmProjects\Teste_DMCard\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sjanu\PycharmProjects\Teste_DMCard\templates" />
+      <recent name="C:\Users\sjanu\PycharmProjects\Teste_DMCard\view" />
+      <recent name="C:\Users\sjanu\PycharmProjects\Teste_DMCard\models" />
+      <recent name="C:\Users\sjanu\PycharmProjects\Teste_DMCard" />
+      <recent name="C:\Users\sjanu\PycharmProjects\Teste_DMCard\srcTest" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -247,6 +260,27 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.server (1)">
+    <configuration name="backend" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Teste_DMCard" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backend.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="server (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Teste_DMCard" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -310,34 +344,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for srcTest.test_dbconfig.TestDbconfig" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="Teste_DMCard" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/srcTest/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;srcTest.test_dbconfig.TestDbconfig&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests for srcTest.test_dbconfig.TestDbconfig.test_ler_arquivo_config_para_obter_info_de_acesso_ao_db" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="Teste_DMCard" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/srcTest/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;srcTest.test_dbconfig.TestDbconfig.test_ler_arquivo_config_para_obter_info_de_acesso_ao_db&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Unittests for srcTest.test_views.TestIndex" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="Teste_DMCard" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -370,9 +376,9 @@
       <list>
         <item itemvalue="Python.server (1)" />
         <item itemvalue="Python.server" />
+        <item itemvalue="Python.backend" />
         <item itemvalue="Python tests.Unittests for test_views.TestIndex" />
         <item itemvalue="Python tests.Unittests for srcTest.test_views.TestIndex" />
-        <item itemvalue="Python tests.Unittests for srcTest.test_dbconfig.TestDbconfig" />
       </list>
     </recent_temporary>
   </component>
@@ -434,12 +440,12 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16741072" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.16741072" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32850242" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49925596" visible="true" weight="0.24637681" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49925596" weight="0.4057971" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4814815" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -453,13 +459,13 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16741072" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.16741072" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32850242" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49925596" visible="true" weight="0.39291465" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4814815" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49925596" weight="0.4057971" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4814815" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32850242" />
@@ -475,30 +481,35 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/controllers/regra_score.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/views.py</url>
           <line>41</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/controllers/regra_score.py</url>
-          <line>13</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/controllers/regra_score.py</url>
-          <line>14</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/srcTest/test_dbconfig.py</url>
           <line>12</line>
           <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/views/views.py</url>
+          <line>108</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/backend.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/views/views.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -509,17 +520,9 @@
         <watch expression="parser" />
       </configuration>
       <configuration name="PythonConfigurationType">
-        <watch expression="request.headers['Content-Type']" language="Python" />
-        <watch expression="request.headers" />
-        <watch expression="request.form['cpf']" />
-        <watch expression="Response.status_code" />
-        <watch expression="__py_debug_temp_var_538535027" />
-        <watch expression="request" />
-        <watch expression="        pessoa_json = request.get_json()&#10;" />
-        <watch expression="pessoa_json" />
-        <watch expression="pessoa_json['cpf']" />
-        <watch expression="config.get(&quot;DB&quot;, &quot;host&quot;)" />
-        <watch expression="db" />
+        <watch expression="y" />
+        <watch expression="d" />
+        <watch expression="renda" />
       </configuration>
     </watches-manager>
   </component>
@@ -543,7 +546,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/teste.py" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -584,34 +586,10 @@
     <entry file="file://$PROJECT_DIR$/config.py" />
     <entry file="file://$PROJECT_DIR$/banco.py" />
     <entry file="file://$PROJECT_DIR$/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/templates/consulta_cadastroa.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/consulta_cadastro.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/menu_principal.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="118" selection-start-line="6" selection-start-column="109" selection-end-line="6" selection-end-column="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/regra_score.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
@@ -661,33 +639,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dbaccess.py" />
     <entry file="file://$PROJECT_DIR$/views.py" />
-    <entry file="file://$PROJECT_DIR$/models/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" selection-start-column="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/dbaccess.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="24" column="148" lean-forward="true" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="148" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db.config">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -709,24 +660,103 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/dbaccess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/consulta_cadastro.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/consulta_cadastroa.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/novo2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="4" selection-start-line="4" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/regra_score.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-249">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/novo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="81" selection-start-line="30" selection-start-column="81" selection-end-line="30" selection-end-column="81" />
+        <state relative-caret-position="255">
+          <caret line="15" column="75" selection-start-line="15" selection-start-column="75" selection-end-line="15" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teste.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/dao.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="17">
+          <caret line="1" column="94" selection-start-line="1" selection-start-column="94" selection-end-line="1" selection-end-column="94" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="89" selection-start-line="18" selection-start-column="89" selection-end-line="18" selection-end-column="89" />
+        <state relative-caret-position="148">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
           <folding>
             <element signature="e#0#83#0" expanded="true" />
           </folding>

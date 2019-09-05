@@ -1,7 +1,7 @@
 from flask import render_template, request, redirect, flash, url_for, jsonify, json
 from models.models import Pessoa
 import json, jsonpickle
-from controllers.regra_score import gerar_credito, defini_score
+from controllers.regra_score import gerar_credito, defini_score,formataValor, formataCpf, formataDecimal
 from models.dao import PessoaDao
 from server import db, app
 
@@ -35,17 +35,37 @@ def novo():
 
 @app.route('/criar', methods=['POST', ])
 def criar():
-    if request.form['cpf'].isdigit() and request.form['renda'].isdigit():
-        score = defini_score()
-        pessoa_dao.salvar(Pessoa(request.form['cpf'], request.form['nome'], request.form['renda'], request.form['logradouro']
-                             , request.form['numero'], request.form['bairro'], score,
-                             gerar_credito(request.form['renda'], score)))
 
+    if request.content_type != 'application/json':
+        payload = jsonify(request.form)
+        tela = True
+
+    if pessoa_dao.buscaCpf(formataCpf(payload.json['cpf'], True)):
+        flash('CPF já consta na base!')
+        return redirect(url_for('consultacadastro'))
+
+    score = defini_score()
+    pessoa_dao.salvar(Pessoa(formataCpf(payload.json['cpf'], True),
+                            payload.json['nome'],
+                            formataValor(formataDecimal(payload.json['renda'])),
+                            payload.json['logradouro'],
+                            payload.json['numero'],
+                            payload.json['bairro'],
+                            score,
+                            gerar_credito(payload.json['renda'],
+                            score)))
+    if tela:
         flash('Cadastro realizado com sucesso!')
         return redirect(url_for('consultacadastro'))
+
     else:
-        flash('Digite apenas número nos campos de CPF e Renda!')
-        return redirect(url_for('novo'))
+        response = app.response_class(
+            response=json.dumps('Cadastro realizado com sucesso'),
+            status=201,
+            mimetype='application/json'
+        )
+        return response
+
 
 
 @app.route('/api/criar', methods=['POST', ])
@@ -82,3 +102,8 @@ def deletar_api(cpf):
         return jsonify({'Menssagem': 'Cadastro removido com sucesso'})
     except Exception as e:
         return jsonify({'Menssagem': str(e)})
+
+
+@app.route('/novo2')
+def novo2():
+    return render_template('novo2.html')

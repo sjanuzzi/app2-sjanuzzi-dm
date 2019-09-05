@@ -1,10 +1,10 @@
 from models.models import Pessoa
-
+#TODO  https://pt.stackoverflow.com/questions/365490/verificar-se-registros-existem-com-python
 SQL_EXCLUI_POR_CPF = 'delete from heroku_2f4f5627753b053.cadastro_pessoa where cpf = %s'
 SQL_BUSCA_CADASTRO = 'select cpf, nome, renda, logradouro, numero,bairro, socre, valor_credito from heroku_2f4f5627753b053.cadastro_pessoa'
 SQL_CRIA_CADASTRO= 'insert into heroku_2f4f5627753b053.cadastro_pessoa (cpf,nome,renda,logradouro,numero,bairro,socre,' \
                    'valor_credito) values (%s, %s, %s,%s, %s, %s,%s, %s)'
-
+SQL_BUSCA_CPF = 'SELECT cpf, nome, renda, logradouro, numero,bairro, socre, valor_credito from heroku_2f4f5627753b053.cadastro_pessoa where cpf = %s'
 
 class PessoaDao:
     def __init__(self, db):
@@ -19,10 +19,11 @@ class PessoaDao:
         return pessoa
 
     def listar(self):
-        cursor = self.__db.cursor()
-        cursor.execute(SQL_BUSCA_CADASTRO)
-        retorno_pessoas = traduz_pessoas(cursor.fetchall())
-        return retorno_pessoas
+        return traduz_pessoas(self.__db.cursor().execute(SQL_BUSCA_CADASTRO).fetchall())
+
+    def buscaCpf(self, cpf):
+        return self.__db.cursor().execute(SQL_BUSCA_CPF, (cpf,))
+
 
     def deletar(self, cpf):
         self.__db.cursor().execute(SQL_EXCLUI_POR_CPF, (cpf, ))
