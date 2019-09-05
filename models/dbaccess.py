@@ -16,5 +16,6 @@ def dbconfig(filename, section):
 
     return db
 
+
 def connect(config):
     return mysql.connector.connect(**config)

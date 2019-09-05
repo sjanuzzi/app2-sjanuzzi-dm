@@ -1,5 +1,5 @@
 
-schema= 'heroku_2f4f5627753b053'
+schema = 'heroku_2f4f5627753b053'
 def SQL_EXCLUI_POR_CPF():
     return 'delete from '+ schema +'.cadastro_pessoa where cpf = %s'
 

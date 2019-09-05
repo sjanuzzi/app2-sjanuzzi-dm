@@ -13,6 +13,7 @@ class PessoaDao:
                                            pessoa.numero_logradouro, pessoa.bairro, pessoa.score_pessoa,
                                            pessoa.valor_credito))
             db.commit()
+            db.close()
             return pessoa
         except Exception as e:
             log_error("salvar  erro ->> : {}".format(e))
@@ -24,7 +25,7 @@ class PessoaDao:
             cursor = db.cursor()
             cursor.execute(SQL_BUSCA_CADASTRO())
             retorno_pessoas = traduz_pessoas(cursor.fetchall())
-
+            db.close()
             return retorno_pessoas
         except Exception as e:
             log_error("listar  erro ->> : {}".format(e))
@@ -36,11 +37,8 @@ class PessoaDao:
             cursor.execute(SQL_BUSCA_CPF(),( cpf,))
             retorno_pessoas = traduz_pessoas(cursor.fetchall())
             db.close()
-            #if len(retorno_pessoas) != 0:
-            #    return False
-            #else:
-            #    return True
             return retorno_pessoas
+
         except Exception as e:
             log_error("buscaCpf erro ->>: {}".format(str(e)))
 
@@ -49,6 +47,7 @@ class PessoaDao:
             db = PessoaDao.conexaodb(self)
             db.cursor().execute(SQL_EXCLUI_POR_CPF(), (cpf, ))
             db.commit()
+            db.close()
         except Exception as e:
             print("deletar erro ->>: {}".format(str(e)))
 
