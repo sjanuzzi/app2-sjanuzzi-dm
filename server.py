@@ -1,9 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
 import os
-#from models.dbaccess import dbconfig, connect
-
-
 
 app = Flask(__name__)
 app.secret_key = 'ConstroleCadastro'
