@@ -1,20 +1,20 @@
 import random
 from decimal import Decimal
-import locale
+
 
 def defini_score():
     return random.randint(1, 999)
 
 def gerar_credito(renda, score):
-
+    
     renda = formataDecimal(renda)
     if score in range(1, 300):
         return('Crédito Reprovado')
     elif score in range(300, 600):
-        return formataValor('1000')
+        return formataValor(Decimal('1000'))
     elif score in range(600, 800):
         novo_credito = renda / 2
-        return formataValor(novo_credito) if novo_credito > Decimal('1000') else formataValor(Decimal('1000'))
+        return formataValor(novo_credito)if novo_credito > Decimal('1000') else formataValor(Decimal('1000'))
     elif score in range(800, 951):
         return formataValor((renda * 200) / 100)
     elif range(951, 999):
@@ -22,8 +22,7 @@ def gerar_credito(renda, score):
 
 
 def formataValor(valor):
-    locale.setlocale(locale.LC_ALL, 'pt_BR')
-    return locale.currency(valor, grouping=True)
+    return ('{:.2f}'.format(valor))
 
 def formataDecimal(valor):
     return Decimal(valor.replace(',', '.'))

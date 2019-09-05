@@ -16,7 +16,7 @@ def index():
 @app.route('/cadastros',  methods=['GET',])
 def consultacadastro():
     lista = pessoa_dao.listar()
-    lista_json = json.dumps(lista, default=lambda o: o.__dict__,sort_keys=True, indent=4)
+    lista_json = json.dumps(lista,default=lambda o: o.__dict__,sort_keys=True, indent=2)
     if request.content_type not in ['application/json', 'application/json; charset=UTF-8']:
         return render_template('consulta_cadastro.html', titulo='Constrole de Cadastro', pessoas=json.loads(lista_json))
     else:
