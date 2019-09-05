@@ -1,44 +1,67 @@
 from models.models import Pessoa
-
-SQL_EXCLUI_POR_CPF = 'delete from heroku_2f4f5627753b053.cadastro_pessoa where cpf = %s'
-SQL_BUSCA_CADASTRO = 'select cpf, nome, CONVERT(renda, char(100)) as renda, logradouro, numero,bairro, socre, valor_credito from heroku_2f4f5627753b053.cadastro_pessoa'
-SQL_CRIA_CADASTRO= 'insert into heroku_2f4f5627753b053.cadastro_pessoa (cpf,nome,renda,logradouro,numero,bairro,socre,' \
-                   'valor_credito) values (%s, %s, %s,%s, %s, %s,%s, %s)'
-SQL_BUSCA_CPF = 'SELECT cpf, nome, renda, logradouro, numero,bairro, socre, valor_credito from heroku_2f4f5627753b053.cadastro_pessoa where cpf = %s'
+from models.dbaccess import dbconfig, connect
+from models.sqlcomand import SQL_BUSCA_CPF, SQL_BUSCA_CADASTRO ,SQL_CRIA_CADASTRO,SQL_EXCLUI_POR_CPF
+import sys
 
 
 class PessoaDao:
-    def __init__(self, db):
-        self.__db = db
+    def __init__(self, filename, section):
+        self.__filename = filename
+        self._section = section
 
     def salvar(self, pessoa):
-        cursor = self.__db.cursor()
-        cursor.execute(SQL_CRIA_CADASTRO, (pessoa.cpf, pessoa.nome, pessoa.renda, pessoa.logradouro,
+        try:
+            db = PessoaDao.conexaodb()
+            cursor = db.cursor()
+            cursor.execute(SQL_CRIA_CADASTRO(), (pessoa.cpf, pessoa.nome, pessoa.renda, pessoa.logradouro,
                                            pessoa.numero_logradouro, pessoa.bairro, pessoa.score_pessoa,
                                            pessoa.valor_credito))
-        self.__db.commit()
-        return pessoa
+            db.commit()
+            return pessoa
+        except Exception as e:
+            sys.stdout.write("salvar  erro ->> : {}".format(e))
 
     def listar(self):
-        cursor = self.__db.cursor()
-        cursor.execute(SQL_BUSCA_CADASTRO)
-        retorno_pessoas = traduz_pessoas(cursor.fetchall())
-        return retorno_pessoas
+        try:
+            db = PessoaDao.conexaodb()
+            cursor = db.cursor()
+            cursor.execute(SQL_BUSCA_CADASTRO())
+            retorno_pessoas = traduz_pessoas(cursor.fetchall())
 
+            return retorno_pessoas
+        except Exception as e:
+            sys.stdout.write("listar  erro ->> : {}".format(e))
 
     def buscaCpf(self, cpf):
-        cursor = self.__db.cursor()
-        cursor.execute(SQL_BUSCA_CPF,( cpf,))
-        retorno_pessoas = traduz_pessoas(cursor.fetchall())
-        if len(retorno_pessoas) != 0:
-            return False
-        else:
-            return True
-        # return True if len(self.__db.cursor().execute(SQL_BUSCA_CPF, (cpf,).fetchany())) != 0 else False
+        try:
+            db = PessoaDao.conexaodb()
+            cursor = db.cursor()
+            cursor.execute(SQL_BUSCA_CPF(),( cpf,))
+            retorno_pessoas = traduz_pessoas(cursor.fetchall())
+            db.close()
+            if len(retorno_pessoas) != 0:
+                return False
+            else:
+                return True
+        except Exception as e:
+            sys.stdout.write("buscaCpf erro ->>: {}".format(str(e)))
+
 
     def deletar(self, cpf):
-        self.__db.cursor().execute(SQL_EXCLUI_POR_CPF, (cpf, ))
-        self.__db.commit()
+        try:
+            sys.stdout.write("cfp > : {}".format(cpf))
+            sys.stdout.write(SQL_EXCLUI_POR_CPF())
+            db = PessoaDao.conexaodb()
+            db.cursor().execute(SQL_EXCLUI_POR_CPF(), (cpf, ))
+            db.commit()
+        except Exception as e:
+            sys.stdout.write("deletar erro ->>: {}".format(str(e)))
+
+    @staticmethod
+    def conexaodb():
+        filename = 'db.config'
+        section = 'DB'
+        return connect(dbconfig(filename, section))
 
 
 def traduz_pessoas(pessoa):

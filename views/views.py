@@ -3,9 +3,11 @@ from models.models import Pessoa
 import json, jsonpickle
 from controllers.regra_score import gerar_credito, defini_score,formataValor, formataCpf, formataDecimal
 from models.dao import PessoaDao
-from server import db, app
+from server import app
 
-pessoa_dao = PessoaDao(db)
+filename = 'db.config'
+section = 'DB'
+pessoa_dao = PessoaDao(filename, section )
 
 
 @app.route('/')
@@ -21,11 +23,6 @@ def consultacadastro():
         return render_template('consulta_cadastro.html', titulo='Constrole de Cadastro', pessoas=json.loads(lista_json))
     else:
         return lista_json
-
-
-@app.route('/api/cadastros', methods=['GET', ])
-def consultacadastro_api():
-    return jsonpickle.encode(pessoa_dao.listar())
 
 
 @app.route('/novo')
@@ -54,6 +51,27 @@ def criar():
         return redirect(url_for('consultacadastro'))
 
 
+@app.route('/deletar/<string:cpf>')
+def deletar(cpf):
+    pessoa_dao.deletar(cpf)
+    flash('Cadastro removido com sucesso!')
+    return redirect(url_for('consultacadastro'))
+
+
+#======================== rotas API =============================================
+
+@app.route('/api/deletar/<string:cpf>', methods=['DELETE'])
+def deletar_api(cpf):
+    try:
+        pessoa_dao.deletar(cpf)
+        return jsonify({'Menssagem': 'Cadastro removido com sucesso'})
+    except Exception as e:
+        return jsonify({'Menssagem': str(e)})
+
+@app.route('/api/cadastros', methods=['GET', ])
+def consultacadastro_api():
+    return jsonpickle.encode(pessoa_dao.listar())
+
 @app.route('/api/criar', methods=['POST', ])
 def criar_api():
 
@@ -74,22 +92,3 @@ def criar_api():
         return response
 
 
-@app.route('/deletar/<string:cpf>')
-def deletar(cpf):
-    pessoa_dao.deletar(cpf)
-    flash('Cadastro removido com sucesso!')
-    return redirect(url_for('consultacadastro'))
-
-
-@app.route('/api/deletar/<string:cpf>', methods=['DELETE'])
-def deletar_api(cpf):
-    try:
-        pessoa_dao.deletar(cpf)
-        return jsonify({'Menssagem': 'Cadastro removido com sucesso'})
-    except Exception as e:
-        return jsonify({'Menssagem': str(e)})
-
-
-@app.route('/novo2')
-def novo2():
-    return render_template('novo2.html')

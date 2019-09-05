@@ -6,7 +6,7 @@ def defini_score():
     return random.randint(1, 999)
 
 def gerar_credito(renda, score):
-    
+
     renda = formataDecimal(renda)
     if score in range(1, 300):
         return('Crédito Reprovado')
