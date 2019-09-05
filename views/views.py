@@ -45,8 +45,9 @@ def criar():
         flash('Cadastro realizado com sucesso!')
         return redirect(url_for('consultacadastro'))
     else:
+        lista_json = json.dumps(pessoa_dao.buscaCpf(formataCpf(request.form['cpf'])), default=lambda o: o.__dict__, sort_keys=True, indent=2)
         flash('CPF já cadastrado!')
-        return redirect(url_for('consultacadastro'))
+        return render_template('consulta_cadastro_unitario.html', titulo='Constrole de Cadastro', pessoas=json.loads(lista_json))
 
 
 @app.route('/deletar/<string:cpf>')
