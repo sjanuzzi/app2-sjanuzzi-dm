@@ -27,9 +27,5 @@ def formataValor(valor):
 def formataDecimal(valor):
     return Decimal(valor.replace(',', '.'))
 
-def formataCpf(cpf, base):
-    cpf = ('%011d' % int(cpf))
-    if (base):
-        return cpf
-    else:
-        return cpf[:3] + "." + cpf[3:6] + "." + cpf[6:9] + "-" + cpf[9:]
+def formataCpf(cpf):
+    return '%011d' % int(cpf)

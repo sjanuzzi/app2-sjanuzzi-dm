@@ -30,9 +30,9 @@ def novo():
 @app.route('/criar', methods=['POST', ])
 def criar():
 
-    if (pessoa_dao.buscaCpf(formataCpf(request.form['cpf'], True))):
+    if not pessoa_dao.buscaCpf(formataCpf(request.form['cpf'])):
         score = defini_score()
-        pessoa_dao.salvar(Pessoa(formataCpf(request.form['cpf'], True),
+        pessoa_dao.salvar(Pessoa(formataCpf(request.form['cpf']),
                             request.form['nome'],
                             formataValor(formataDecimal(request.form['renda'])),
                             request.form['logradouro'],
@@ -58,9 +58,16 @@ def deletar(cpf):
 
 #======================== rotas API =============================================
 
-@app.route('/v1/cadastros', methods=['GET', ])
+@app.route('/v1/cadastros/', methods=['GET', ])
 def consultacadastro_api():
-    return json.dumps(pessoa_dao.listar())
+
+    cpf = request.args.get('cpf')
+
+    if not cpf:
+        return json.dumps(pessoa_dao.listar(),default=lambda o: o.__dict__,sort_keys=True, indent=2)
+    else:
+        return json.dumps(pessoa_dao.buscaCpf(formataCpf(cpf)),default=lambda o: o.__dict__,sort_keys=True, indent=2)
+
 
 @app.route('/v1/deletar/<string:cpf>', methods=['DELETE',])
 def deletar_api(cpf):

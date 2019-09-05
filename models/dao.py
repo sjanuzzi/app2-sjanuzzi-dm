@@ -36,10 +36,11 @@ class PessoaDao:
             cursor.execute(SQL_BUSCA_CPF(),( cpf,))
             retorno_pessoas = traduz_pessoas(cursor.fetchall())
             db.close()
-            if len(retorno_pessoas) != 0:
-                return False
-            else:
-                return True
+            #if len(retorno_pessoas) != 0:
+            #    return False
+            #else:
+            #    return True
+            return retorno_pessoas
         except Exception as e:
             log_error("buscaCpf erro ->>: {}".format(str(e)))
 
