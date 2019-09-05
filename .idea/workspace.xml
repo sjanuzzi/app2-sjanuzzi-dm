@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ceca370-f23a-43f6-a038-9c14dd63b2fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teste.py" beforeDir="false" afterPath="$PROJECT_DIR$/teste.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/novo.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/novo.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,19 +13,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Test/config.ini">
+        <entry file="file://$PROJECT_DIR$/templates/novo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db.config">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="31" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="31" />
+            <state relative-caret-position="187">
+              <caret line="11" column="203" selection-start-line="11" selection-start-column="203" selection-end-line="11" selection-end-column="203" />
             </state>
           </provider>
         </entry>
@@ -112,7 +101,6 @@
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/BACKEND.py" />
         <option value="$PROJECT_DIR$/backend.py" />
-        <option value="$PROJECT_DIR$/templates/novo.html" />
         <option value="$PROJECT_DIR$/models/models.py" />
         <option value="$PROJECT_DIR$/db.config" />
         <option value="$PROJECT_DIR$/templates/novo2.html" />
@@ -133,6 +121,7 @@
         <option value="$PROJECT_DIR$/Test/test_dbconfig.py" />
         <option value="$PROJECT_DIR$/Test/test_defini_score.py" />
         <option value="$PROJECT_DIR$/Test/config.ini" />
+        <option value="$PROJECT_DIR$/templates/novo.html" />
       </list>
     </option>
   </component>
@@ -159,12 +148,7 @@
             <path>
               <item name="Teste_DMCard" type="b2602c69:ProjectViewProjectNode" />
               <item name="Teste_DMCard" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Teste_DMCard" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Teste_DMCard" type="462c0819:PsiDirectoryNode" />
-              <item name="Test" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -638,13 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/novo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="75" selection-start-line="15" selection-start-column="75" selection-end-line="15" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/menu_principal.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -708,6 +685,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Test/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/db.config">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -715,10 +699,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test/config.ini">
+    <entry file="file://$PROJECT_DIR$/templates/novo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+        <state relative-caret-position="187">
+          <caret line="11" column="203" selection-start-line="11" selection-start-column="203" selection-end-line="11" selection-end-column="203" />
         </state>
       </provider>
     </entry>
