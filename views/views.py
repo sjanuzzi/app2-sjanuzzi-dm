@@ -43,7 +43,7 @@ def criar():
                             score)))
 
         flash('Cadastro realizado com sucesso!')
-        return redirect(url_for('consultacadastro'), 201)
+        return redirect(url_for('consultacadastro'))
     else:
         flash('CPF já cadastrado!')
         return redirect(url_for('consultacadastro'))
