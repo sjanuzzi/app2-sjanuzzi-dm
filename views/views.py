@@ -36,35 +36,19 @@ def novo():
 @app.route('/criar', methods=['POST', ])
 def criar():
 
-    tela = False
-    if request.content_type != 'application/json':
-        payload = jsonify(request.form)
-        tela = True
-    else:
-        payload = request.json
-
-    if (pessoa_dao.buscaCpf(formataCpf(payload.json['cpf'], True))):
+    if (pessoa_dao.buscaCpf(formataCpf(request.form['cpf'], True))):
         score = defini_score()
-        pessoa_dao.salvar(Pessoa(formataCpf(payload.json['cpf'], True),
-                            payload.json['nome'],
-                            formataValor(formataDecimal(payload.json['renda'])),
-                            payload.json['logradouro'],
-                            payload.json['numero'],
-                            payload.json['bairro'],
+        pessoa_dao.salvar(Pessoa(formataCpf(request.form['cpf'], True),
+                            request.form['nome'],
+                            formataValor(formataDecimal(request.form['renda'])),
+                            request.form['logradouro'],
+                            request.form['numero'],
+                            request.form['bairro'],
                             score,
-                            gerar_credito(payload.json['renda'],
+                            gerar_credito(request.form['renda'],
                             score)))
-        if tela:
-            flash('Cadastro realizado com sucesso!')
-            return redirect(url_for('consultacadastro'))
-        else:
-            response = app.response_class(
-                        response=json.dumps('Cadastro realizado com sucesso'),
-                    status=201,
-                    mimetype='application/json'
-                )
-
-            return response
+        flash('Cadastro realizado com sucesso!')
+        return redirect(url_for('consultacadastro'))
     else:
         flash('CPF já cadastrado!')
         return redirect(url_for('consultacadastro'))
