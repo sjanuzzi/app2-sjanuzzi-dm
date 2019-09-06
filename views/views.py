@@ -92,9 +92,9 @@ def deletar_api(cpf):
 @app.route('/v1/criar', methods=['POST', ])
 def criar_api():
 
-    if (pessoa_dao.buscaCpf(formataCpf(request.json['cpf'], True))):
+    if not pessoa_dao.buscaCpf(formataCpf(request.json['cpf'])):
         score = defini_score()
-        nova_pessoa = Pessoa(formataCpf(request.json['cpf'], True),
+        nova_pessoa = Pessoa(formataCpf(request.json['cpf']),
                             request.json['nome'],
                             formataValor(formataDecimal(request.json['renda'])),
                             request.json['logradouro'],

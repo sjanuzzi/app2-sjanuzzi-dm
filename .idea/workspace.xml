@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ceca370-f23a-43f6-a038-9c14dd63b2fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/novo.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/novo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/views/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,11 +12,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/novo.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="203" selection-start-line="11" selection-start-column="203" selection-end-line="11" selection-end-column="203" />
+            <state relative-caret-position="34">
+              <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="49">
+              <caret line="94" column="63" lean-forward="true" selection-start-line="94" selection-start-column="63" selection-end-line="94" selection-end-column="63" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,7 +126,6 @@
         <option value="$PROJECT_DIR$/server.py" />
         <option value="$PROJECT_DIR$/controllers/regra_score.py" />
         <option value="$PROJECT_DIR$/templates/template_erro.html" />
-        <option value="$PROJECT_DIR$/views/views.py" />
         <option value="$PROJECT_DIR$/templates/consulta_cadastro_unitario.html" />
         <option value="$PROJECT_DIR$/models/dbaccess.py" />
         <option value="$PROJECT_DIR$/models/sqlcomand.py" />
@@ -122,6 +136,7 @@
         <option value="$PROJECT_DIR$/Test/test_defini_score.py" />
         <option value="$PROJECT_DIR$/Test/config.ini" />
         <option value="$PROJECT_DIR$/templates/novo.html" />
+        <option value="$PROJECT_DIR$/views/views.py" />
       </list>
     </option>
   </component>
@@ -148,7 +163,7 @@
             <path>
               <item name="Teste_DMCard" type="b2602c69:ProjectViewProjectNode" />
               <item name="Teste_DMCard" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="commons" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -405,7 +420,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/views/views.py</url>
-          <line>107</line>
+          <line>99</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -507,16 +522,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/commons/log.config]" />
-    <entry file="file://$PROJECT_DIR$/teste.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/teste.py" />
     <entry file="file://$PROJECT_DIR$/models/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -559,8 +565,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="34">
+          <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
@@ -631,8 +637,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="47" column="82" selection-start-line="47" selection-start-column="82" selection-end-line="47" selection-end-column="82" />
+        <state relative-caret-position="49">
+          <caret line="94" column="63" lean-forward="true" selection-start-line="94" selection-start-column="63" selection-end-line="94" selection-end-column="63" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
