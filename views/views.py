@@ -59,7 +59,7 @@ def deletar(cpf):
 
 #======================== rotas API =============================================
 
-@app.route('/v1/solicitacoes/', methods=['GET', ])
+@app.route('/api/solicitacoes', methods=['GET', ])
 def consultacadastro_api():
 
     cpf = request.args.get('cpf')
@@ -70,7 +70,7 @@ def consultacadastro_api():
         return json.dumps(pessoa_dao.buscaCpf(formataCpf(cpf)),default=lambda o: o.__dict__,sort_keys=True, indent=2)
 
 
-@app.route('/v1/solicitacoes/<string:cpf>', methods=['DELETE', ])
+@app.route('/api/solicitacoes/<string:cpf>', methods=['DELETE', ])
 def deletar_api(cpf):
     try:
         pessoa_dao.deletar(cpf)
@@ -89,7 +89,7 @@ def deletar_api(cpf):
 
 
 
-@app.route('/v1/solicitacoes', methods=['POST', ])
+@app.route('/api/solicitacoes', methods=['POST', ])
 def criar_api():
 
     if not pessoa_dao.buscaCpf(formataCpf(request.json['cpf'])):

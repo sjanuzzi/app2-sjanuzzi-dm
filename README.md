@@ -46,39 +46,40 @@ db.config
 Procfile
 requirements.txt  
 server.py 
-´´´´
 ```
 ## Rotas criadas nesse projeto
 
- * Rota principal para aplicação web
+ * **Web** Rota principal para aplicação web
        `https://app-sjanuzzi.herokuapp.com/`
        
- * Rotas para as apis
+ * **Restful** - Rotas para as apis
 
-````
-  - GET - retorna todas as solicitações cadastradas
+  *  **Metodos:**
+   - **[GET]** - retorna todas as solicitações cadastradas
   
-   Rota: http://app-sjanuzzi.herokuapp.com/v1/cadastros/
-      return code 200
-    -  Retorno
-  
-       [ 
-         { 
-            "bairro":"Satelite",
-            "cpf":"11223212331",
-            "logradouro":"Rua dos Planetas",
-            "nome":" Teste Json postman",
-            "numero_logradouro":"1",
-            "renda":"1039.00",
-            "score_pessoa":"777",
-            "valor_credito":"1000.00"
-         }
-      ]
-  ```
+		-   Rota: `http://app-sjanuzzi.herokuapp.com/v1/cadastros`
+		      Return code 200
+		    * Retorno será dos dados informado no momento do cadastro e mais o 		score e valor do crédito aprovado
   ````
-  - POST - Para o cadastro de nova solicitação
-  
-    Rota: https://app-sjanuzzi.herokuapp.com/v1/criar
+				       [ 
+				         { 
+				            "bairro":"Satelite",
+				            "cpf":"11223212331",
+				            "logradouro":"Rua dos Planetas",
+				            "nome":" Teste Json postman",
+				            "numero_logradouro":"1",
+				            "renda":"1039.00",
+				            "score_pessoa":"777",
+				            "valor_credito":"1000.00"
+				         }
+				      ]
+  ````
+
+
+
+   - **[POST]** - Para o cadastro de nova solicitação
+		-  Rota: `app-sjanuzzi.herokuapp.com/v1/criar`
+ ````   
      - return code: 201
       { 
         "bairro":"Satelite",
@@ -88,7 +89,9 @@ server.py
         "numero":"1",
         "renda":"1039.00"
       }
-    # Response 201
+  ````      
+   **Retorno** será um json com o dados informados no cadastro de solicitação, mais o campo de score e valor do credito aprovado.
+   ````
     {
        "bairro": "Satelite",
        "cpf": "22478547327",
@@ -99,12 +102,11 @@ server.py
        "score_pessoa": 642,
        "valor_credito": "1000.00"
     }
-
   ````
 
-````
-DELETE - Para o excluir um cadastro de solicitação
+  
+   - **[DELETE]** - Para o excluir um cadastro de solicitação
 
- http://app-sjanuzzi.herokuapp.com/v1/solicitacoes/{cpf}
-   - return code: 200
-  ````
+	 **Rota:** `app-sjanuzzi.herokuapp.com/v1/solicitacoes/{cpf}`
+	   - return code: 200 
+  
