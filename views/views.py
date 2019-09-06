@@ -89,7 +89,7 @@ def deletar_api(cpf):
 
 
 
-@app.route('/api/solicitacoes', methods=['POST', ])
+@app.route('/api/solicitacoes/', methods=['POST', ])
 def criar_api():
 
     if not pessoa_dao.buscaCpf(formataCpf(request.json['cpf'])):
