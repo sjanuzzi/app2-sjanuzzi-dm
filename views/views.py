@@ -14,7 +14,7 @@ def index():
     return render_template('menu_principal.html', titulo='Constrole de Cadastro')
 
 
-@app.route('/cadastros',  methods=['GET',])
+@app.route('/solicitacoes',  methods=['GET',])
 def consultacadastro():
     log_info(request.method +' '+ request.path )
     lista = pessoa_dao.listar()
@@ -50,7 +50,7 @@ def criar():
         return render_template('consulta_cadastro_unitario.html', titulo='Constrole de Cadastro', pessoas=json.loads(lista_json))
 
 
-@app.route('/deletar/<string:cpf>')
+@app.route('/solicitacoes/<string:cpf>')
 def deletar(cpf):
     pessoa_dao.deletar(cpf)
     flash('Cadastro removido com sucesso!')
@@ -59,7 +59,7 @@ def deletar(cpf):
 
 #======================== rotas API =============================================
 
-@app.route('/v1/cadastros/', methods=['GET', ])
+@app.route('/v1/solicitacoes/', methods=['GET', ])
 def consultacadastro_api():
 
     cpf = request.args.get('cpf')
@@ -70,7 +70,7 @@ def consultacadastro_api():
         return json.dumps(pessoa_dao.buscaCpf(formataCpf(cpf)),default=lambda o: o.__dict__,sort_keys=True, indent=2)
 
 
-@app.route('/v1/deletar/<string:cpf>', methods=['DELETE',])
+@app.route('/v1/solicitacoes/<string:cpf>', methods=['DELETE', ])
 def deletar_api(cpf):
     try:
         pessoa_dao.deletar(cpf)
@@ -89,7 +89,7 @@ def deletar_api(cpf):
 
 
 
-@app.route('/v1/criar', methods=['POST', ])
+@app.route('/v1/solicitacoes', methods=['POST', ])
 def criar_api():
 
     if not pessoa_dao.buscaCpf(formataCpf(request.json['cpf'])):

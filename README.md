@@ -1,23 +1,18 @@
 
 
-# Aplicação Restful 
+## GYPZ- Tech Challenge 
 
-  * Tecnologia utilizadas:
-    - Python version 3.7.3
-    - Flask version 1.0.3
-    - Flask-Cors version 3.0.7
-    - MySql Connector Python version 8.0.11
-    - Banco de dados ClearDB MySQL (Hroku host)
-    
- 
+  
 Aplicação utiliza a infraestrutur na plataforma em nuvem Heroku. 
-Essa aplica aapresen
 
+* Tecnologia utilizadas: 
+	* - Python version 3.7.3 
+	* - Flask version 1.0.3 
+	* - Flask-Cors version 3.0.7 
+	* - MySql Connector Python version 8.0.11 -
+	*  Banco de dados ClearDB MySQL 
     
-
 ## Estrutura de Diretório
-
-Utilizado a IDE PyCharm.
 
 ```
 commons/
@@ -56,15 +51,17 @@ server.py
 ## Rotas criadas nesse projeto
 
  * Rota principal para aplicação web
- 
-      `http://app2-sjanuzzi-dm.herokuapp.com` 
+       `https://app-sjanuzzi.herokuapp.com/`
+       
  * Rotas para as apis
-   
+
+````
   - GET - retorna todas as solicitações cadastradas
   
-      `http://app2-sjanuzzi-dm.herokuapp.com/v1/cadastros/`return code 200
-    - Exemplo de Retorno
-  ```
+   Rota: http://app-sjanuzzi.herokuapp.com/v1/cadastros/
+      return code 200
+    -  Retorno
+  
        [ 
          { 
             "bairro":"Satelite",
@@ -75,24 +72,14 @@ server.py
             "renda":"1039.00",
             "score_pessoa":"777",
             "valor_credito":"1000.00"
-         },
-         { 
-            "bairro":"Satelite",
-            "cpf":"22478547327",
-            "logradouro":"Rua dos Planetas",
-            "nome":" Teste Json postman",
-            "numero_logradouro":"1",
-            "renda":"1039.00",
-            "score_pessoa":"642",
-            "valor_credito":"1000.00"
          }
       ]
   ```
+  ````
   - POST - Para o cadastro de nova solicitação
   
-        `https://app-sjanuzzi.herokuapp.com/v1/criar` return code 201
-    ```
-      # Payload
+    Rota: https://app-sjanuzzi.herokuapp.com/v1/criar
+     - return code: 201
       { 
         "bairro":"Satelite",
         "cpf":"22478547327",
@@ -112,9 +99,12 @@ server.py
        "score_pessoa": 642,
        "valor_credito": "1000.00"
     }
-  ´´´
-  
-  - DELETE - Para o excluir um cadastro de solicitação
-  
-        `http://app2-sjanuzzi-dm.herokuapp.com/v1/deletar/{cpf}` return code 200
-  
+
+  ````
+
+````
+DELETE - Para o excluir um cadastro de solicitação
+
+ http://app-sjanuzzi.herokuapp.com/v1/solicitacoes/{cpf}
+   - return code: 200
+  ````
