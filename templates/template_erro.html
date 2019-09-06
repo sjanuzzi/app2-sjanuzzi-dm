@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cadastro de Solicitação de Cartão</title>
+    <title>Cadastro de Cliente</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
   </head>
   <body>
@@ -12,13 +12,13 @@
             {% if messages %}
                 <ul id="messages" class="list-unstyled">
                 {% for message in messages %}
-                    <li class="alert alert-success">{{ message }}</li>
+                    <li class="alert alert-danger">{{ message }}</li>
                 {% endfor %}
                 </ul>
             {% endif %}
         {% endwith %}
 
-        <div class="page-hea    der" align="center">
+        <div class="page-hea    der">
             <h1>{{ titulo }}</h1>
         </div>
         {% block conteudo %}{% endblock %}
