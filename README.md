@@ -14,7 +14,7 @@ Aplicação desenvolvida em Python 3.7, micro framework Flash, com banco de dado
 	*  Html com Fornt-end com bootstrap
 
     
-## 1 - Estrutura de diretório do projeto
+# 1 - Estrutura de diretório do projeto
 
 ```
 commons/
@@ -51,23 +51,25 @@ server.py
 ```
 ## 2 - Rotas criadas nesse projeto
 
- * **Web** Rota principal para aplicação web
-       `https://app-sjanuzzi.herokuapp.com/`
-       Na solução Web existe as  funcionalidades de criar uma solicitação, Consultar todas as solicitações e Excluir uma solicitação.
+ * **Web** Rota principal para aplicação web.
+		`https://app-sjanuzzi.herokuapp.com/`
+		  Na solução Web existe as  funcionalidades de criar uma solicitação, Consultar todas as solicitações e Excluir uma solicitação.
        
  * **Restful** - Rotas para as apis
-	
+
 
    **Metodos:**
- 
+   
   - **[GET]** - retorna todas as solicitações cadastradas
-		
-		-  Rota: `app-sjanuzzi.herokuapp.com/cartoes/v1/solicitacoes`
-		     Return code 200
-		  -> Retorno será dos dados informado no momento do cadastro e mais o score e valor do crédito aprovado
+
+	  -  Rota: `app-sjanuzzi.herokuapp.com/cartoes/v1/solicitacoes`
 
 
-  ````
+	     Return code 200
+	    -> Retorno será dos dados informado no momento do cadastro e mais o score e valor do crédito aprovado
+
+
+  ``` json
        [ 
          { 
             "bairro":"Satelite",
@@ -80,13 +82,13 @@ server.py
             "valor_credito":"1000.00"
          }
       ]
-  ````
+  ```
 
 
 
    - **[POST]** - Para o cadastro de nova solicitação
 		-  Rota: `app-sjanuzzi.herokuapp.com/cartoes/v1/solicitacoes`
- ````   
+ ``` json  
      - return code: 201
       { 
         "bairro":"Satelite",
@@ -96,9 +98,9 @@ server.py
         "numero":"1",
         "renda":"1039.00"
       }
-  ````      
+  ```     
    **Retorno** será um json com o dados informados no cadastro de solicitação, mais o campo de score e valor do credito aprovado.
-   ````
+   ```` json
     {
        "bairro": "Satelite",
        "cpf": "22478547327",
@@ -115,15 +117,35 @@ server.py
    - **[DELETE]** - Para o excluir um cadastro de solicitação
 
 	 **Rota:** `app-sjanuzzi.herokuapp.com/cartoes/v1/solicitacoes/{cpf}`
-	   - return code: 200 
+	    - return code: 200 
 
   
-| **Link para as rotas.**   |  [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/7e29256f1ea954ed625e) |
-|--|--|
+| **Link para as rotas**   |  [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/7e29256f1ea954ed625e) |
+
+|**Contrato das Rotas**| [![Run in Postman](https://run.pstmn.io/button.svg)](https://documenter.getpostman.com/view/6824243/SVmpW23f) |
+
+## 3 - Banco de dados
+
+Banco de dados ClearDB MySQL disponivel na plataforma do Heroku.
+Criado uma tabela para armazenar as informações que foram informadas na tela Web e nas Rotas Api.
+
+Taleba:
+```sql
+CREATE TABLE heroku_2f4f5627753b053.cadastro_pessoa(
+    id SMALLINT AUTO_INCREMENT,
+    cpf varchar (12) not null,
+    nome varchar(120),
+    renda decimal(10,2),
+    logradouro varchar(120),
+    numero varchar(60),
+    bairro varchar(60),
+    socre varchar(10),
+    valor_credito  varchar(100),
+    PRIMARY KEY(id, cpf));
+```
 
 
-
-## 3 - Log 
+## 4 - Log da aplicação
 Aplicação com estrutura de log Trace (logging função built-in do python)
 Heroku disponibiliza um view que fornece todos os logs que a aplicação gerou
 
