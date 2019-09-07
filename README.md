@@ -51,9 +51,9 @@ server.py
 ```
 ## 2 - Rotas criadas nesse projeto
 
- * **Web** Rota principal para aplicação web
-       `https://app-sjanuzzi.herokuapp.com/`
-       Na solução Web existe as  funcionalidades de criar uma solicitação, Consultar todas as solicitações e Excluir uma solicitação.
+ * **Web** Rota principal para aplicação web.
+		`https://app-sjanuzzi.herokuapp.com/`
+		  Na solução Web existe as  funcionalidades de criar uma solicitação, Consultar todas as solicitações e Excluir uma solicitação.
        
  * **Restful** - Rotas para as apis
 
@@ -119,6 +119,7 @@ server.py
 
   
 | **Link para as rotas**   |  [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/7e29256f1ea954ed625e) |
+
 |**Contrato das Rotas**| [![Run in Postman](https://run.pstmn.io/button.svg)](https://documenter.getpostman.com/view/6824243/SVmpW23f) |
 
 ## 3 - Banco de dados
@@ -129,7 +130,7 @@ Criado uma tabela para armazenar as informações que foram informadas na tela W
 Taleba:
 ```sql
 CREATE TABLE heroku_2f4f5627753b053.cadastro_pessoa(
-	id SMALLINT AUTO_INCREMENT,
+    id SMALLINT AUTO_INCREMENT,
     cpf varchar (12) not null,
     nome varchar(120),
     renda decimal(10,2),
