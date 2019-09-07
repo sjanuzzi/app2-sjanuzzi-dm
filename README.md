@@ -59,7 +59,7 @@ server.py
   
 		-   Rota: `http://app-sjanuzzi.herokuapp.com/v1/cadastros`
 		      Return code 200
-		    * Retorno será dos dados informado no momento do cadastro e mais o 		score e valor do crédito aprovado
+		    * Retorno será dos dados informado no momento do cadastro e mais o score e valor do crédito aprovado
   ````
 				       [ 
 				         { 
