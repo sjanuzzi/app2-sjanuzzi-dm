@@ -5,12 +5,12 @@
 Aplicação utiliza a infraestrutura na plataforma em nuvem Heroku. 
 
 * Tecnologia utilizadas: 
-	* - Python version 3.7.3 
-	* - Flask version 1.0.3 
-	* - Flask-Cors version 3.0.7 
-	* - MySql Connector Python version 8.0.11
-	* - Banco de dados ClearDB MySQL 
-	* - Html com Fornt-end com bootstrap
+	*  Python version 3.7.3 
+	*  Flask version 1.0.3 
+	*  Flask-Cors version 3.0.7 
+	*  MySql Connector Python version 8.0.11
+	*  Banco de dados ClearDB MySQL 
+	*  Html com Fornt-end com bootstrap
     
 ## Estrutura de diretório do projeto
 
