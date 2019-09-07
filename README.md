@@ -1,23 +1,23 @@
 
-## GYPZ- Tech Challenge 
+## GYPZ - Teste de Desenvolvedor 
 
   
-Aplicação utiliza a infraestrutura na plataforma em nuvem Heroku. 
+Aplicação desenvolvida em Python 3.7 com micro framework Flash e com banco de dados MySql e o front-end, um simples Html com bootstrap e utlizando a infraestrutura na plataforma em nuvem Heroku. 
 
 * Tecnologia utilizadas: 
-	* - Python version 3.7.3 
+	* - Python version 3.7
 	* - Flask version 1.0.3 
 	* - Flask-Cors version 3.0.7 
 	* - MySql Connector Python version 8.0.11
 	* - Banco de dados ClearDB MySQL 
 	* - Html com Fornt-end com bootstrap
     
-## Estrutura de diretório do projeto
+## 1 - Estrutura de diretório do projeto
 
 ```
 commons/
     log.config
-    grava_log.py
+    grava_log.py 
 controllers/
     regra_score.py
 models/
@@ -47,38 +47,40 @@ Procfile
 requirements.txt  
 server.py 
 ```
-## Rotas criadas nesse projeto
+## 2 - Rotas criadas nesse projeto
 
  * **Web** Rota principal para aplicação web
        `https://app-sjanuzzi.herokuapp.com/`
+       Na solução Web existe as  funcionalidades de criar uma solicitação, Consultar todas as solicitações e Excluir uma solicitação.
        
  * **Restful** - Rotas para as apis
 	
- **Metodos:**
-**[GET]** - retorna todas as solicitações cadastradas
-  
-		-   Rota: `http://app-sjanuzzi.herokuapp.com/v1/cadastros`
-		      Return code 200
-		    * Retorno será dos dados informado no momento do cadastro e mais o 		score e valor do crédito aprovado
+   **Metodos:**
+ 
+  - **[GET]** - retorna todas as solicitações cadastradas
+		-  Rota: `app-sjanuzzi.herokuapp.com/cartoes/v1/solicitacoes`
+		     Return code 200
+		    -> Retorno será dos dados informado no momento do cadastro e mais o score e valor do crédito aprovado
+
   ````
-				       [ 
-				         { 
-				            "bairro":"Satelite",
-				            "cpf":"11223212331",
-				            "logradouro":"Rua dos Planetas",
-				            "nome":" Teste Json postman",
-				            "numero_logradouro":"1",
-				            "renda":"1039.00",
-				            "score_pessoa":"777",
-				            "valor_credito":"1000.00"
-				         }
-				      ]
+       [ 
+         { 
+            "bairro":"Satelite",
+            "cpf":"11223212331",
+            "logradouro":"Rua dos Planetas",
+            "nome":" Teste Json postman",
+            "numero_logradouro":"1",
+            "renda":"1039.00",
+            "score_pessoa":"777",
+            "valor_credito":"1000.00"
+         }
+      ]
   ````
 
 
 
    - **[POST]** - Para o cadastro de nova solicitação
-		-  Rota: `app-sjanuzzi.herokuapp.com/v1/criar`
+		-  Rota: `app-sjanuzzi.herokuapp.com/cartoes/v1/solicitacoes`
  ````   
      - return code: 201
       { 
@@ -107,14 +109,16 @@ server.py
   
    - **[DELETE]** - Para o excluir um cadastro de solicitação
 
-	 **Rota:** `app-sjanuzzi.herokuapp.com/v1/solicitacoes/{cpf}`
+	 **Rota:** `app-sjanuzzi.herokuapp.com/cartoes/v1/solicitacoes/{cpf}`
 	   - return code: 200 
 
-**Link para as rotas.**      [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/7e29256f1ea954ed625e)
+  
+| **Link para as rotas.**   |  [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/7e29256f1ea954ed625e) |
+|--|--|
 
 
-**Logs:**
 
+## 3 - Log 
 Aplicação com estrutura de log Trace (logging função built-in do python)
 Heroku disponibiliza um view que fornece todos os logs que a aplicação gerou
 
