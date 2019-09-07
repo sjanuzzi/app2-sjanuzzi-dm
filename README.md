@@ -2,7 +2,7 @@
 ## GYPZ - Teste de Desenvolvedor 
 
   
-Aplicação desenvolvida em Python 3.7 com micro framework Flash e com banco de dados MySql e o front-end, um simples Html com bootstrap e utlizando a infraestrutura na plataforma em nuvem Heroku. 
+Aplicação desenvolvida em Python 3.7, micro framework Flash, com banco de dados MySql e o front-end, um simples Html com bootstrap e utlizando a infraestrutura na plataforma em nuvem Heroku. 
 
 * Tecnologia utilizadas: 
 	* - Python version 3.7
