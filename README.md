@@ -61,7 +61,9 @@ server.py
    **Metodos:**
    
   - **[GET]** - retorna todas as solicitações cadastradas
+
 	  -  Rota: `app-sjanuzzi.herokuapp.com/cartoes/v1/solicitacoes`
+
 
 	     Return code 200
 	    -> Retorno será dos dados informado no momento do cadastro e mais o score e valor do crédito aprovado
