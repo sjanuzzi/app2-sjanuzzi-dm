@@ -5,12 +5,14 @@
 Aplicação desenvolvida em Python 3.7, micro framework Flash, com banco de dados MySql e o front-end, um simples Html com bootstrap e utlizando a infraestrutura na plataforma em nuvem Heroku. 
 
 * Tecnologia utilizadas: 
-	* - Python version 3.7
-	* - Flask version 1.0.3 
-	* - Flask-Cors version 3.0.7 
-	* - MySql Connector Python version 8.0.11
-	* - Banco de dados ClearDB MySQL 
-	* - Html com Fornt-end com bootstrap
+
+	*  Python version 3.7.3 
+	*  Flask version 1.0.3 
+	*  Flask-Cors version 3.0.7 
+	*  MySql Connector Python version 8.0.11
+	*  Banco de dados ClearDB MySQL 
+	*  Html com Fornt-end com bootstrap
+
     
 ## 1 - Estrutura de diretório do projeto
 
@@ -55,12 +57,14 @@ server.py
        
  * **Restful** - Rotas para as apis
 	
+
    **Metodos:**
  
   - **[GET]** - retorna todas as solicitações cadastradas
 		-  Rota: `app-sjanuzzi.herokuapp.com/cartoes/v1/solicitacoes`
 		     Return code 200
 		    -> Retorno será dos dados informado no momento do cadastro e mais o score e valor do crédito aprovado
+
 
   ````
        [ 
