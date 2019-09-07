@@ -14,7 +14,7 @@ def index():
     return render_template('menu_principal.html', titulo='Constrole de Cadastro')
 
 
-@app.route('/solicitacoes',  methods=['GET',])
+@app.route('/cartoes/solicitacoes',  methods=['GET',])
 def consultacadastro():
     log_info(request.method +' '+ request.path )
     lista = pessoa_dao.listar()
@@ -27,7 +27,7 @@ def novo():
     return render_template('novo.html', titulo='Novo Cadastro')
 
 
-@app.route('/criar', methods=['POST', ])
+@app.route('/cartoes/criar', methods=['POST', ])
 def criar():
 
     if not pessoa_dao.buscaCpf(formataCpf(request.form['cpf'])):
@@ -50,7 +50,7 @@ def criar():
         return render_template('consulta_cadastro_unitario.html', titulo='Constrole de Cadastro', pessoas=json.loads(lista_json))
 
 
-@app.route('/solicitacoes/<string:cpf>')
+@app.route('/cartoes/solicitacoes/<string:cpf>')
 def deletar(cpf):
     pessoa_dao.deletar(cpf)
     flash('Cadastro removido com sucesso!')
@@ -59,7 +59,7 @@ def deletar(cpf):
 
 #======================== rotas API =============================================
 
-@app.route('/api/solicitacoes', methods=['GET', ])
+@app.route('/cartoes/v1/solicitacoes', methods=['GET', ])
 def consultacadastro_api():
 
     cpf = request.args.get('cpf')
@@ -70,13 +70,13 @@ def consultacadastro_api():
         return json.dumps(pessoa_dao.buscaCpf(formataCpf(cpf)),default=lambda o: o.__dict__,sort_keys=True, indent=2)
 
 
-@app.route('/api/solicitacoes/<string:cpf>', methods=['DELETE', ])
+@app.route('/cartoes/v1/solicitacoes/<string:cpf>', methods=['DELETE', ])
 def deletar_api(cpf):
     try:
         pessoa_dao.deletar(cpf)
 
         return app.response_class(
-            response=json.dumps('Cadastro removido com sucesso'),
+            response=json.dumps({"Mensagem": "Cadastro removido com sucesso", "Status": "200"}),
             status=200,
             mimetype='application/json'
         )
@@ -89,7 +89,7 @@ def deletar_api(cpf):
 
 
 
-@app.route('/api/solicitacoes/', methods=['POST', ])
+@app.route('/cartoes/v1/solicitacoes/', methods=['POST', ])
 def criar_api():
 
     if not pessoa_dao.buscaCpf(formataCpf(request.json['cpf'])):
@@ -112,7 +112,7 @@ def criar_api():
         )
     else:
         return app.response_class(
-            response=json.dumps('CPF já cadastrado!'),
+            response=json.dumps({"Mensagem":"CPF já cadastrado!", "Status":"400"}),
             status=400,
             mimetype='application/json'
         )
